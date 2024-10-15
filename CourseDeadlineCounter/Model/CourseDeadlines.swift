@@ -9,6 +9,7 @@ import Foundation
 
 struct CourseDeadlines: Codable {
 	let course: String
+	let startDate: Date // TODO: use start date to count percentage of course done & time left
 	var deadlines: [Deadline] = []
 	
 	mutating func add(_ deadline: Deadline) throws {
