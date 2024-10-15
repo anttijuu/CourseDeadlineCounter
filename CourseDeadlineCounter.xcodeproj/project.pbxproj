@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		316ED3552CBE2E4900F150DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 316ED33B2CBE2E4700F150DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 316ED3422CBE2E4700F150DE;
+			remoteInfo = CourseDeadlineCounter;
+		};
+		316ED35F2CBE2E4900F150DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 316ED33B2CBE2E4700F150DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 316ED3422CBE2E4700F150DE;
+			remoteInfo = CourseDeadlineCounter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		316ED3432CBE2E4700F150DE /* CourseDeadlineCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseDeadlineCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		316ED3542CBE2E4900F150DE /* CourseDeadlineCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseDeadlineCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		316ED35E2CBE2E4900F150DE /* CourseDeadlineCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseDeadlineCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		316ED3452CBE2E4700F150DE /* CourseDeadlineCounter */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CourseDeadlineCounter;
+			sourceTree = "<group>";
+		};
+		316ED3572CBE2E4900F150DE /* CourseDeadlineCounterTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CourseDeadlineCounterTests;
+			sourceTree = "<group>";
+		};
+		316ED3612CBE2E4900F150DE /* CourseDeadlineCounterUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CourseDeadlineCounterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		316ED3402CBE2E4700F150DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED3512CBE2E4900F150DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED35B2CBE2E4900F150DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		316ED33A2CBE2E4700F150DE = {
+			isa = PBXGroup;
+			children = (
+				316ED3452CBE2E4700F150DE /* CourseDeadlineCounter */,
+				316ED3572CBE2E4900F150DE /* CourseDeadlineCounterTests */,
+				316ED3612CBE2E4900F150DE /* CourseDeadlineCounterUITests */,
+				316ED3442CBE2E4700F150DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		316ED3442CBE2E4700F150DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				316ED3432CBE2E4700F150DE /* CourseDeadlineCounter.app */,
+				316ED3542CBE2E4900F150DE /* CourseDeadlineCounterTests.xctest */,
+				316ED35E2CBE2E4900F150DE /* CourseDeadlineCounterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 316ED3682CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounter" */;
+			buildPhases = (
+				316ED33F2CBE2E4700F150DE /* Sources */,
+				316ED3402CBE2E4700F150DE /* Frameworks */,
+				316ED3412CBE2E4700F150DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				316ED3452CBE2E4700F150DE /* CourseDeadlineCounter */,
+			);
+			name = CourseDeadlineCounter;
+			packageProductDependencies = (
+			);
+			productName = CourseDeadlineCounter;
+			productReference = 316ED3432CBE2E4700F150DE /* CourseDeadlineCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		316ED3532CBE2E4900F150DE /* CourseDeadlineCounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 316ED36B2CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounterTests" */;
+			buildPhases = (
+				316ED3502CBE2E4900F150DE /* Sources */,
+				316ED3512CBE2E4900F150DE /* Frameworks */,
+				316ED3522CBE2E4900F150DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				316ED3562CBE2E4900F150DE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				316ED3572CBE2E4900F150DE /* CourseDeadlineCounterTests */,
+			);
+			name = CourseDeadlineCounterTests;
+			packageProductDependencies = (
+			);
+			productName = CourseDeadlineCounterTests;
+			productReference = 316ED3542CBE2E4900F150DE /* CourseDeadlineCounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		316ED35D2CBE2E4900F150DE /* CourseDeadlineCounterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 316ED36E2CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounterUITests" */;
+			buildPhases = (
+				316ED35A2CBE2E4900F150DE /* Sources */,
+				316ED35B2CBE2E4900F150DE /* Frameworks */,
+				316ED35C2CBE2E4900F150DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				316ED3602CBE2E4900F150DE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				316ED3612CBE2E4900F150DE /* CourseDeadlineCounterUITests */,
+			);
+			name = CourseDeadlineCounterUITests;
+			packageProductDependencies = (
+			);
+			productName = CourseDeadlineCounterUITests;
+			productReference = 316ED35E2CBE2E4900F150DE /* CourseDeadlineCounterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		316ED33B2CBE2E4700F150DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					316ED3422CBE2E4700F150DE = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					316ED3532CBE2E4900F150DE = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 316ED3422CBE2E4700F150DE;
+					};
+					316ED35D2CBE2E4900F150DE = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 316ED3422CBE2E4700F150DE;
+					};
+				};
+			};
+			buildConfigurationList = 316ED33E2CBE2E4700F150DE /* Build configuration list for PBXProject "CourseDeadlineCounter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 316ED33A2CBE2E4700F150DE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 316ED3442CBE2E4700F150DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */,
+				316ED3532CBE2E4900F150DE /* CourseDeadlineCounterTests */,
+				316ED35D2CBE2E4900F150DE /* CourseDeadlineCounterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		316ED3412CBE2E4700F150DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED3522CBE2E4900F150DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED35C2CBE2E4900F150DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		316ED33F2CBE2E4700F150DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED3502CBE2E4900F150DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		316ED35A2CBE2E4900F150DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		316ED3562CBE2E4900F150DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */;
+			targetProxy = 316ED3552CBE2E4900F150DE /* PBXContainerItemProxy */;
+		};
+		316ED3602CBE2E4900F150DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */;
+			targetProxy = 316ED35F2CBE2E4900F150DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		316ED3662CBE2E4900F150DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		316ED3672CBE2E4900F150DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		316ED3692CBE2E4900F150DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CourseDeadlineCounter/CourseDeadlineCounter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CourseDeadlineCounter/Preview Content\"";
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		316ED36A2CBE2E4900F150DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CourseDeadlineCounter/CourseDeadlineCounter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CourseDeadlineCounter/Preview Content\"";
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		316ED36C2CBE2E4900F150DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CourseDeadlineCounter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CourseDeadlineCounter";
+			};
+			name = Debug;
+		};
+		316ED36D2CBE2E4900F150DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CourseDeadlineCounter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CourseDeadlineCounter";
+			};
+			name = Release;
+		};
+		316ED36F2CBE2E4900F150DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CourseDeadlineCounter;
+			};
+			name = Debug;
+		};
+		316ED3702CBE2E4900F150DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CFVP6JHU6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.anttijuustila.CourseDeadlineCounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CourseDeadlineCounter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		316ED33E2CBE2E4700F150DE /* Build configuration list for PBXProject "CourseDeadlineCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316ED3662CBE2E4900F150DE /* Debug */,
+				316ED3672CBE2E4900F150DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		316ED3682CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316ED3692CBE2E4900F150DE /* Debug */,
+				316ED36A2CBE2E4900F150DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		316ED36B2CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316ED36C2CBE2E4900F150DE /* Debug */,
+				316ED36D2CBE2E4900F150DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		316ED36E2CBE2E4900F150DE /* Build configuration list for PBXNativeTarget "CourseDeadlineCounterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316ED36F2CBE2E4900F150DE /* Debug */,
+				316ED3702CBE2E4900F150DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 316ED33B2CBE2E4700F150DE /* Project object */;
+}
