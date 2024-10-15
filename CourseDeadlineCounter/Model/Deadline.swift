@@ -24,6 +24,12 @@ struct Deadline: Codable {
 		}
 		return Date.now.distance(to: date) <= TimeInterval(becomesHotDaysBefore * 24 * 60 * 60)
 	}
+	
+	func percentageReached(from startDate: Date) -> Int {
+		let wholeSpan = date.distance(to: startDate)
+		let currentSpan = Date.now.distance(to: startDate)
+		return Int((currentSpan / wholeSpan) * 100)
+	}
 }
 
 extension Deadline: Identifiable, Equatable, Comparable, Hashable {

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SingleDeadlineListRow: View {
-	let deadline: Deadline
+	@Environment(Deadlines.self) var deadlines
+	
+	@State var deadline: Deadline
 	
 	var body: some View {
 		HStack(spacing: 12) {
@@ -16,7 +18,7 @@ struct SingleDeadlineListRow: View {
 				.font(.title)
 				.symbolRenderingMode(.multicolor)
 				.foregroundStyle(deadlineColor)
-				.frame(width: 42)
+				.frame(width: 48)
 			VStack(alignment: .leading, spacing: 2) {
 				HStack {
 					Text(deadline.date, style: .relative)
@@ -24,10 +26,17 @@ struct SingleDeadlineListRow: View {
 				}
 				.font(.title3)
 				.foregroundStyle(deadlineColor)
+				if !deadline.isReached {
+					Text("\(deadline.percentageReached(from: deadlines.currentCourse.startDate).formatted(.percent)) of course time spent")
+						.font(.title2)
+						.bold()
+						.foregroundStyle(deadlineColor)
+				}
 				VStack(alignment: .leading) {
 					Text(deadline.goal)
+						.font(.title2)
 						.bold()
-					Text(deadline.date.formatted(date: .long, time: .standard))
+					Text(deadline.date.formatted(date: .long, time: .shortened))
 				}
 				.foregroundStyle(deadline.isReached ? .gray : .primary)
 			}

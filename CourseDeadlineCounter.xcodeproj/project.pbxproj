@@ -33,7 +33,7 @@
 		316ED3742CBE2E8900F150DE /* Exceptions for "CourseDeadlineCounter" folder in "CourseDeadlineCounterTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Model/CourseDeadlines.swift,
+				Model/Course.swift,
 				Model/Deadline.swift,
 				Model/DeadlineErrors.swift,
 				Model/Deadlines.swift,

@@ -12,7 +12,7 @@ class Deadlines {
 	
 	static private(set) var storagePath: URL = URL.documentsDirectory
 	var courses: [String] = []
-	var deadlines = CourseDeadlines(course: "???")
+	var currentCourse = Course(name: "???", startDate: .now)
 	
 	init() {
 		Self.storagePath = URL.documentsDirectory.appending(component: "CourseDeadlines", directoryHint: .isDirectory)
@@ -35,19 +35,33 @@ class Deadlines {
 					}
 				}
 			}
+			courses.sort()
 			if !courses.isEmpty {
-				deadlines = try loadDeadlines(for: courses[0])!
+				try loadDeadlines(for: courses[0])
 			}
 		} catch {
 			print("Error in restoring deadlines for course \(courses[0]) because \(error.localizedDescription)")
 		}
 	}
 	
-	func loadDeadlines(for course: String) throws -> CourseDeadlines? {
+	func loadDeadlines(for course: String) throws {
 		guard courses.contains(course) else {
-			return nil
+			return
 		}
-		return try CourseDeadlines.restore(from: Self.storagePath, for: course)
+		currentCourse = try Course.restore(from: Self.storagePath, for: course)
+	}
+	
+	func saveDeadlines(for course: Course, with oldName: String? = nil) throws {
+		if let oldName {
+			if currentCourse.name != oldName {
+				courses.removeAll(where: { $0 == oldName })
+			}
+		}
+		if !courses.contains(course.name) {
+			courses.append(course.name)
+		}
+		try course.store(to: Self.storagePath)
+		currentCourse = course
 	}
 	
 }

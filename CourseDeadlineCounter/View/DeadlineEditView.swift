@@ -74,7 +74,8 @@ struct DeadlineEditView: View {
 	
 	private func save() throws {
 		let modifiedDeadline = Deadline(uuid: deadline!.uuid, date: editDeadline, symbol: editSymbolName, goal: editDeadlineGoal, becomesHotDaysBefore: editDaysComesHot)
-		try deadlines.deadlines.modify(modifiedDeadline)
+		try deadlines.currentCourse.modifyOrAdd(modifiedDeadline)
+		try deadlines.loadDeadlines(for: deadlines.currentCourse.name)
 		dismiss()
 	}
 }
