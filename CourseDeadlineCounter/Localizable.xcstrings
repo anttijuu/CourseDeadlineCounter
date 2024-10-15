@@ -1,0 +1,146 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld days before deadline" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ennen deadlinea"
+          }
+        }
+      }
+    },
+    "ago" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sitten"
+          }
+        }
+      }
+    },
+    "Could not save deadlines" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallennus ei onnistunut"
+          }
+        }
+      }
+    },
+    "Deadline becomes a hot thing" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadlinesta tulee kuuma"
+          }
+        }
+      }
+    },
+    "Deadline goal:" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadlinen tavoite:"
+          }
+        }
+      }
+    },
+    "Deadlines for %@" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadlinet kurssille %@"
+          }
+        }
+      }
+    },
+    "Edit deadline" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa deadlinea"
+          }
+        }
+      }
+    },
+    "Edit Deadline" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa Deadlinea"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Virhe"
+          }
+        }
+      }
+    },
+    "FS Symbol name:" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FS Symbolin nimi:"
+          }
+        }
+      }
+    },
+    "left" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kuluttua"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna"
+          }
+        }
+      }
+    },
+    "See SF Symbols app for available symbols" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katso symboleita SF Symbols -apista"
+          }
+        }
+      }
+    },
+    "Set deadline:" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta deadline:"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

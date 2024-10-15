@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CourseDeadlineCounterApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	@State private var deadlines = Deadlines()
+	
+	var body: some Scene {
+		WindowGroup {
+			ContentView()
+				.environment(deadlines)
+		}
+	}
 }
