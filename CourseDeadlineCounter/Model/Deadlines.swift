@@ -12,7 +12,7 @@ class Deadlines {
 	
 	static private(set) var storagePath: URL = URL.documentsDirectory
 	var courses: [String] = []
-	var currentCourse = Course(name: "???", startDate: .now)
+	var currentCourse = Course(name: "---", startDate: Date.now)
 	
 	init() {
 		Self.storagePath = URL.documentsDirectory.appending(component: "CourseDeadlines", directoryHint: .isDirectory)
@@ -44,14 +44,14 @@ class Deadlines {
 		}
 	}
 	
-	func loadDeadlines(for course: String) throws {
-		guard courses.contains(course) else {
+	func loadDeadlines(for courseName: String) throws {
+		guard courses.contains(courseName) else {
 			return
 		}
-		currentCourse = try Course.restore(from: Self.storagePath, for: course)
+		try currentCourse = currentCourse.restore(from: Self.storagePath, for: courseName)
 	}
 	
-	func saveDeadlines(for course: Course, with oldName: String? = nil) throws {
+	func saveCourse(for course: Course, with oldName: String? = nil) throws {
 		if let oldName {
 			if currentCourse.name != oldName {
 				courses.removeAll(where: { $0 == oldName })

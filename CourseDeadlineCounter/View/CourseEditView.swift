@@ -55,6 +55,6 @@ struct CourseEditView: View {
 	
 	private func save() throws {
 		let editedCourse = Course(name: editCourseName, startDate: editStartDate)
-		try deadlines.saveDeadlines(for: editedCourse, with: editedCourse.name != course!.name ? course!.name : nil)
+		try deadlines.saveCourse(for: editedCourse, with: editedCourse.name != course!.name ? course!.name : nil)
 	}
 }

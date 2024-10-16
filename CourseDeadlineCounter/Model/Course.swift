@@ -7,14 +7,33 @@
 
 import Foundation
 
-struct Course: Codable {
-	var uuid: UUID = UUID()
-	let name: String
-	let startDate: Date
-	var deadlines: [Deadline] = []
+@Observable
+class Course: Codable {
+	var uuid: UUID
+	var name: String
+	var startDate: Date
+	var deadlines: [Deadline]
+	
+	enum CodingKeys: String, CodingKey {
+		case _uuid = "uuid"
+		case _name = "name"
+		case _startDate = "startDate"
+		case _deadlines = "deadlines"
+	}
+	
+	init(name: String, startDate: Date) {
+		uuid = UUID()
+		self.name = name
+		self.startDate = startDate
+		deadlines = []
+	}
 	
 	var courseAgeInDays: Int {
 		Int(Date.now.timeIntervalSince(startDate)) / 86400
+	}
+	
+	func percentageLeft() -> Int {
+		return 100 - percentageReached()
 	}
 	
 	func percentageReached() -> Int {
@@ -26,23 +45,25 @@ struct Course: Codable {
 		return 0
 	}
 	
-	mutating func add(_ deadline: Deadline) throws {
+	func add(_ deadline: Deadline) throws {
 		deadlines.append(deadline)
 		deadlines.sort()
 		try store(to: Deadlines.storagePath)
 	}
 	
-	mutating func remove(at index: Int) throws {
+	func remove(at index: Int) throws {
 		deadlines.remove(at: index)
 		try store(to: Deadlines.storagePath)
 	}
 	
-	mutating func remove(_ deadline: Deadline) throws {
-		try remove(at: deadlines.firstIndex(of: deadline)!)
+	func remove(_ deadline: Deadline) throws {
+		if let index = deadlines.firstIndex(where: { $0.id == deadline.id }) {
+			try remove(at: index)
+		}
 	}
 	
-	mutating func modifyOrAdd(_ deadline: Deadline) throws {
-		if let i = deadlines.firstIndex(of: deadline) {
+	 func modifyOrAdd(_ deadline: Deadline) throws {
+		if let i = deadlines.firstIndex(where: { $0.id == deadline.id }) {
 			 deadlines[i] = deadline
 		} else {
 			deadlines.append(deadline)
@@ -54,7 +75,7 @@ struct Course: Codable {
 		let fileManager = FileManager.default
 		let encoder = JSONEncoder()
 		encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
-		let data = try JSONEncoder().encode(self)
+		let data = try encoder.encode(self)
 		let string = String(data: data, encoding: .utf8)
 		print(string!)
 		let filePath = path.appending(path: name + ".json")
@@ -67,26 +88,27 @@ struct Course: Codable {
 		}
 	}
 	
-	static func restore(from path: URL, for course: String) throws -> Course {
+	func restore(from path: URL, for courseNamed: String) throws -> Course {
 		let fileManager = FileManager.default
-		let filePath = path.appending(path: course + ".json")
+		let filePath = path.appending(path: courseNamed + ".json")
 		guard fileManager.fileExists(atPath: filePath.path()) else {
 			throw DeadlineErrors.fileDoesNotExist
 		}
 		let data = try Data(contentsOf: filePath)
-		var course = try JSONDecoder().decode(Course.self, from: data)
+		let course = try JSONDecoder().decode(Course.self, from: data)
 		course.deadlines.sort()
+//		self.uuid = course.uuid
+//		self.name = course.name
+//		self.startDate = course.startDate
+//		self.deadlines = course.deadlines
 		return course
 	}
 }
 
 extension Course: Identifiable, Equatable, Comparable, Hashable {
-	var id: UUID {
-		uuid
-	}
 	
 	static func == (lhs: Course, rhs: Course) -> Bool {
-		lhs.uuid == rhs.uuid
+		lhs.name == rhs.name
 	}
 	
 	static func < (lhs: Course, rhs: Course) -> Bool {

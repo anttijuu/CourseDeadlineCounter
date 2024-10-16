@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@Environment(Deadlines.self) var deadlines: Deadlines
+	@Environment(Deadlines.self) var deadlines
 	
 	@State var showDeadlineEditView: Bool = false
 	@State var showCourseEditView: Bool = false
@@ -49,7 +49,7 @@ struct ContentView: View {
 			}
 			HStack {
 				Text("Course started \(deadlines.currentCourse.startDate.formatted(date: .abbreviated, time: .omitted)).")
-				Text("and is now \(deadlines.currentCourse.courseAgeInDays) days old, \(deadlines.currentCourse.percentageReached().formatted(.percent)) done.")
+				Text("and is now \(deadlines.currentCourse.courseAgeInDays) days old, \(deadlines.currentCourse.percentageLeft().formatted(.percent)) left to go.")
 			}
 			Divider()
 			List(deadlines.currentCourse.deadlines, selection: $selectedDeadline) { deadline in

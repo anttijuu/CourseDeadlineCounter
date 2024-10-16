@@ -1,12 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ of course time spent" : {
+    "%@ of course time left" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ kurssin työaikaa mennyt"
+            "value" : "%@ aikaa jäljellä deadlineen"
           }
         }
       }
@@ -31,18 +31,18 @@
         }
       }
     },
-    "and is now %lld days old, %@ done." : {
+    "and is now %lld days old, %@ left to go." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "and is now %1$lld days old, %2$@ done."
+            "value" : "and is now %1$lld days old, %2$@ left to go."
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ja on nyt %1$lld päivää vanha, %2$@ suoritettu"
+            "value" : "ja on nyt %1$lld päivää vanha, %2$@ prosenttia jäljellä."
           }
         }
       }
@@ -158,6 +158,7 @@
       }
     },
     "FS Symbol name:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -226,6 +227,9 @@
           }
         }
       }
+    },
+    "SF Symbol name:" : {
+
     },
     "Started in:" : {
       "localizations" : {

@@ -30,7 +30,7 @@ struct DeadlineEditView: View {
 			Text("Edit deadline")
 				.font(.title)
 			Form {
-				TextField("FS Symbol name:", text: $editSymbolName)
+				TextField("SF Symbol name:", text: $editSymbolName)
 				Text("See SF Symbols app for available symbols")
 					.font(.caption)
 				TextField("Deadline goal:", text: $editDeadlineGoal)

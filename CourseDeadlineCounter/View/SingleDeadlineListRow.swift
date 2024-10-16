@@ -27,7 +27,7 @@ struct SingleDeadlineListRow: View {
 				.font(.title3)
 				.foregroundStyle(deadlineColor)
 				if !deadline.isReached {
-					Text("\(deadline.percentageReached(from: deadlines.currentCourse.startDate).formatted(.percent)) of course time spent")
+					Text("\(deadline.percentageLeft(from: deadlines.currentCourse.startDate).formatted(.percent)) of course time left")
 						.font(.title2)
 						.bold()
 						.foregroundStyle(deadlineColor)
