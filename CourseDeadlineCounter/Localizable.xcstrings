@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ of course time left" : {
       "localizations" : {
@@ -51,10 +58,24 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peruuta"
+          }
+        }
+      }
     },
     "Confirm Delete" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vahvista poisto"
+          }
+        }
+      }
     },
     "Could not save Course" : {
       "localizations" : {
@@ -67,15 +88,11 @@
       }
     },
     "Could not save deadline" : {
-
-    },
-    "Could not save deadlines" : {
-      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tallennus ei onnistunut"
+            "value" : "Deadlinea ei voitu tallentaa"
           }
         }
       }
@@ -120,37 +137,75 @@
         }
       }
     },
-    "Deadlines for %@" : {
-      "extractionState" : "stale",
+    "Deadlines for course" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deadlinet kurssille %@"
+            "value" : "Kurssin deadlinet"
           }
         }
       }
     },
-    "Deadlines for course" : {
-
-    },
     "Delete" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista"
+          }
+        }
+      }
     },
     "Delete course" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista kurssi"
+          }
+        }
+      }
     },
     "Delete deadline" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista deadline"
+          }
+        }
+      }
     },
     "Delete Deadline" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista deadlne"
+          }
+        }
+      }
     },
     "Delete this deadline?" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poistetaanko deadline?"
+          }
+        }
+      }
     },
     "Edit" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa"
+          }
+        }
+      }
     },
     "Edit Course" : {
       "localizations" : {
@@ -188,17 +243,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Virhe"
-          }
-        }
-      }
-    },
-    "FS Symbol name:" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FS Symbolin nimi:"
           }
         }
       }
@@ -264,7 +308,14 @@
       }
     },
     "SF Symbol name:" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SF Symbolin nimi:"
+          }
+        }
+      }
     },
     "Started in:" : {
       "localizations" : {
