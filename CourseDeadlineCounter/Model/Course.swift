@@ -62,14 +62,14 @@ class Course: Codable {
 		}
 	}
 	
-	 func modifyOrAdd(_ deadline: Deadline) throws {
-		if let i = deadlines.firstIndex(where: { $0.id == deadline.id }) {
-			 deadlines[i] = deadline
-		} else {
-			deadlines.append(deadline)
-		}
-		try store(to: Deadlines.storagePath)
-	}
+//	func update(_ deadline: Deadline) throws {
+//		// Currently deadlines are classes, so modify is not necessary, add if not in array.
+//		if deadlines.firstIndex(where: { $0.id == deadline.id }) == nil {
+//			deadlines.append(deadline)
+//			deadlines.sort()
+//		}
+//		try store(to: Deadlines.storagePath)
+//	}
 	
 	func store(to path: URL) throws {
 		let fileManager = FileManager.default
@@ -78,34 +78,36 @@ class Course: Codable {
 		let data = try encoder.encode(self)
 		let string = String(data: data, encoding: .utf8)
 		print(string!)
-		let filePath = path.appending(path: name + ".json")
-		if fileManager.fileExists(atPath: filePath.path()) {
-			try fileManager.removeItem(at: filePath)
-		}
-		if !fileManager.createFile(atPath: filePath.path(), contents: data) {
-			print("createFile retuned false :(")
-			//throw DeadlineErrors.fileSaveError
+		let filePath = path.appending(path: name + ".json").path(percentEncoded: false)
+		print("Storing file \(filePath)")
+		if !fileManager.createFile(atPath: filePath, contents: data) {
+			print("createFile returned false :(")
+			throw DeadlineErrors.fileSaveError
 		}
 	}
 	
 	func restore(from path: URL, for courseNamed: String) throws -> Course {
 		let fileManager = FileManager.default
-		let filePath = path.appending(path: courseNamed + ".json")
-		guard fileManager.fileExists(atPath: filePath.path()) else {
+		let filePath = path.appending(path: courseNamed + ".json").path(percentEncoded: false)
+		guard fileManager.fileExists(atPath: filePath) else {
 			throw DeadlineErrors.fileDoesNotExist
 		}
-		let data = try Data(contentsOf: filePath)
+		let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
 		let course = try JSONDecoder().decode(Course.self, from: data)
 		course.deadlines.sort()
-//		self.uuid = course.uuid
-//		self.name = course.name
-//		self.startDate = course.startDate
-//		self.deadlines = course.deadlines
+		self.uuid = course.uuid
+		self.name = course.name
+		self.startDate = course.startDate
+		self.deadlines = course.deadlines
 		return course
 	}
 }
 
 extension Course: Identifiable, Equatable, Comparable, Hashable {
+	
+	var id: UUID {
+		uuid
+	}
 	
 	static func == (lhs: Course, rhs: Course) -> Bool {
 		lhs.name == rhs.name

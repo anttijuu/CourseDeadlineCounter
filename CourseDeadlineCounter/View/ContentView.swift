@@ -12,9 +12,10 @@ struct ContentView: View {
 	
 	@State var showDeadlineEditView: Bool = false
 	@State var showCourseEditView: Bool = false
+	@State var deleteDeadlineAlert: Bool = false
 	
 	@State var selectedDeadline: Deadline? = nil
-	@State var selectedCourse: Course? = nil
+	@State var selectedCourseName: String
 	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
@@ -22,47 +23,70 @@ struct ContentView: View {
 	var body: some View {
 		VStack {
 			HStack {
-				Button("New Course") {
-					selectedCourse = Course(name: "New Course", startDate: .now)
-					showCourseEditView.toggle();
+				VStack {
+					Button("New Course") {
+						deadlines.newCourse()
+						showCourseEditView.toggle();
+					}
+					Button("Delete course") {
+						deadlines.deleteCourse()
+					}
 				}
 				Spacer()
 				Group {
 					Image(systemName: "flag.pattern.checkered.2.crossed")
-					Text("Deadlines for \(deadlines.currentCourse.name)")
+					Picker("Deadlines for course", selection: $selectedCourseName, content: {
+						ForEach(deadlines.courses, id: \.self) { course in
+							Text("\(course)")
+								.tag(course.hashValue)
+						}
+					})
+					.onChange(of: selectedCourseName) {
+						do {
+							try deadlines.loadDeadlines(for: selectedCourseName)
+						} catch  {
+							errorMessage = error.localizedDescription
+							isError = true
+						}
+					}
 					Image(systemName: "flag.pattern.checkered.2.crossed")
 				}
 				.font(.title)
 				Spacer()
 				VStack {
 					Button("Edit Course") {
-						selectedCourse = deadlines.currentCourse
 						showCourseEditView.toggle();
 					}
 					Button("New Deadline") {
 						let newDeadline = Deadline(date: Date.now.addingTimeInterval(60*60*24*30), symbol: "pencil.and.list.clipboard", goal: "A goal to reach in the course", becomesHotDaysBefore: 7)
 						deadlines.currentCourse.deadlines.append(newDeadline)
-						selectedDeadline = newDeadline
-						showDeadlineEditView.toggle();
 					}
 				}
 			}
+			.padding()
 			HStack {
 				Text("Course started \(deadlines.currentCourse.startDate.formatted(date: .abbreviated, time: .omitted)).")
 				Text("and is now \(deadlines.currentCourse.courseAgeInDays) days old, \(deadlines.currentCourse.percentageLeft().formatted(.percent)) left to go.")
 			}
+			.padding()
 			Divider()
-			List(deadlines.currentCourse.deadlines, selection: $selectedDeadline) { deadline in
+			List(deadlines.currentCourse.deadlines, id: \.self, selection: $selectedDeadline) { deadline in
 				SingleDeadlineListRow(deadline: deadline)
 					.swipeActions(edge: .leading) {
 						Button {
-							selectedDeadline = deadline
 							showDeadlineEditView.toggle()
 						} label: {
-							Label("Edit Deadline", systemImage: "square.and.pencil")
+							Label("Edit", systemImage: "square.and.pencil")
 						}
 						.help("Edit Deadline")
 					}
+					.swipeActions(edge: .trailing) {
+						Button(role: .destructive) {
+							deleteDeadlineAlert.toggle()
+						} label: {
+							Label("Delete", systemImage: "trash")
+						}
+						.help("Delete Deadline")
 			}
 		}
 		.padding()
@@ -74,22 +98,38 @@ struct ContentView: View {
 			}
 		}
 		.sheet(isPresented: $showCourseEditView) {
-			if selectedCourse != nil {
-				CourseEditView(course: $selectedCourse)
-					.environment(deadlines)
-					.frame(minWidth: 600, minHeight: 400)
-			}
+			CourseEditView(course: deadlines.currentCourse)
+				.environment(deadlines)
+				.frame(minWidth: 600, minHeight: 400)
 		}
 		.alert("Error", isPresented: $isError, actions: {
 			// No action
 		}, message: {
 			Text(errorMessage)
 		})
+		.alert("Confirm Delete",
+				 isPresented: $deleteDeadlineAlert)
+			{
+				Button(role: .destructive) {
+					if selectedDeadline != nil {
+						delete(selectedDeadline!)
+					}
+				} label: {
+					Text("Delete deadline")
+				}
+				Button("Cancel") {
+					
+				}
+			} message: {
+				Text("Delete this deadline?")
+			}
+		}
+
 	}
 	
-	private func delete(at offsets: IndexSet) {
+	private func delete(_ deadline: Deadline) {
 		do {
-			try deadlines.currentCourse.remove(at: offsets[offsets.startIndex])
+			try deadlines.currentCourse.remove(deadline)
 		} catch {
 			isError = true
 			errorMessage = error.localizedDescription

@@ -65,7 +65,7 @@ struct DeadlineEditView: View {
 				editDaysComesHot = deadline.becomesHotDaysBefore
 			}
 		}
-		.alert("Could not save deadlines", isPresented: $isError, actions: {
+		.alert("Could not save deadline", isPresented: $isError, actions: {
 			// No action
 		}, message: {
 			Text(errorMessage)
@@ -73,9 +73,13 @@ struct DeadlineEditView: View {
 	}
 	
 	private func save() throws {
-		let modifiedDeadline = Deadline(uuid: deadline!.uuid, date: editDeadline, symbol: editSymbolName, goal: editDeadlineGoal, becomesHotDaysBefore: editDaysComesHot)
-		try deadlines.currentCourse.modifyOrAdd(modifiedDeadline)
-		try deadlines.loadDeadlines(for: deadlines.currentCourse.name)
+		if let deadline {
+			deadline.date = editDeadline
+			deadline.symbol = editSymbolName
+			deadline.goal = editDeadlineGoal
+			deadline.becomesHotDaysBefore = editDaysComesHot
+			try deadlines.currentCourse.store(to: Deadlines.storagePath)
+		}
 		dismiss()
 	}
 }

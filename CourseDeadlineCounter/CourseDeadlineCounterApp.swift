@@ -13,7 +13,7 @@ struct CourseDeadlineCounterApp: App {
 	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			ContentView(selectedCourseName: deadlines.selectedCourse)
 				.environment(deadlines)
 		}
 	}

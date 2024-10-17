@@ -11,8 +11,8 @@ struct CourseEditView: View {
 	@Environment(Deadlines.self) var deadlines
 	
 	@Environment(\.dismiss) var dismiss
-	
-	@Binding var course: Course?
+		
+	var course: Course?
 	
 	@State var editCourseName: String = "New Course"
 	@State var editStartDate: Date = Date.now

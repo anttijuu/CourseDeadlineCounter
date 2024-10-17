@@ -68,6 +68,7 @@ extension Deadline: Identifiable, Equatable, Comparable, Hashable {
 	}
 	
 	func hash(into hasher: inout Hasher) {
+		hasher.combine(uuid)
 		hasher.combine(date)
 	}
 }
