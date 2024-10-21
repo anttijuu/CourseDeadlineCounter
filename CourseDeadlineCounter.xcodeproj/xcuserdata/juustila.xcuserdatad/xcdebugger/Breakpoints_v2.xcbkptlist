@@ -50,6 +50,36 @@
             endingLineNumber = "76"
             landmarkName = "save()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85A6FB37-16E8-4C4D-81F8-13A9800F5AA7 - 9f2c64129525332a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CourseDeadlineCounter.DeadlineEditView.save() throws -&gt; ()"
+                  moduleName = "CourseDeadlineCounter.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juustila/workspace/CourseDeadlineCounter/CourseDeadlineCounter/View/DeadlineEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+               <Location
+                  uuid = "85A6FB37-16E8-4C4D-81F8-13A9800F5AA7 - 9f2c64129525332a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CourseDeadlineCounter.DeadlineEditView.save() throws -&gt; ()"
+                  moduleName = "CourseDeadlineCounter.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juustila/workspace/CourseDeadlineCounter/CourseDeadlineCounter/View/DeadlineEditView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
