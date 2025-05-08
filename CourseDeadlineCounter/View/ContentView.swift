@@ -29,12 +29,14 @@ struct ContentView: View {
 						showCourseEditView.toggle();
 					}
 					Button("Delete course") {
+						selectedCourseName = ""
 						deadlines.deleteCourse()
 					}
 				}
 				Spacer()
 				Group {
 					Image(systemName: "flag.pattern.checkered.2.crossed")
+						.foregroundStyle(.blue)
 					Picker("Deadlines for course", selection: $selectedCourseName, content: {
 						ForEach(deadlines.courses, id: \.self) { course in
 							Text("\(course)")
@@ -50,25 +52,30 @@ struct ContentView: View {
 						}
 					}
 					Image(systemName: "flag.pattern.checkered.2.crossed")
+						.foregroundStyle(.red)
 				}
-				.font(.title)
+				.font(.title2)
 				Spacer()
 				VStack {
 					Button("Edit Course") {
 						showCourseEditView.toggle();
 					}
 					Button("New Deadline") {
-						let newDeadline = Deadline(date: Date.now.addingTimeInterval(60*60*24*30), symbol: "pencil.and.list.clipboard", goal: "A goal to reach in the course", becomesHotDaysBefore: 7)
+						let newDeadline = Deadline(date: Date.now.addingTimeInterval(60*60*24*30), symbol: "pencil.and.list.clipboard", goal: NSLocalizedString("A goal to reach in the course", comment: "String to put to a new deadline for user to edit"), becomesHotDaysBefore: 7)
 						deadlines.currentCourse.deadlines.append(newDeadline)
 					}
 				}
 			}
 			.padding()
 			HStack {
-				Text("Course started \(deadlines.currentCourse.startDate.formatted(date: .abbreviated, time: .omitted)).")
-				Text("and is now \(deadlines.currentCourse.courseAgeInDays) days old, \(deadlines.currentCourse.percentageLeft().formatted(.percent)) left to go.")
+				Text("Course start date is \(deadlines.currentCourse.startDate.formatted(date: .abbreviated, time: .omitted))")
+				if deadlines.currentCourse.hasStarted {
+					Text(" Course is now \(deadlines.currentCourse.courseAgeInDays) days old, \(deadlines.currentCourse.percentageLeft().formatted(.percent)) left to go.")
+				} else {
+					Text(" Starts in \(deadlines.currentCourse.daysToStart) days")
+				}
 			}
-			.padding()
+			.font(.title2)
 			Divider()
 			List(deadlines.currentCourse.deadlines, id: \.self, selection: $selectedDeadline) { deadline in
 				SingleDeadlineListRow(deadline: deadline)
@@ -91,8 +98,8 @@ struct ContentView: View {
 		}
 		.padding()
 		.sheet(isPresented: $showDeadlineEditView) {
-			if selectedDeadline != nil {
-				DeadlineEditView(deadline: $selectedDeadline)
+			if let selectedDeadline {
+				DeadlineEditView(deadline: selectedDeadline)
 					.environment(deadlines)
 					.frame(minWidth: 600, minHeight: 400)
 			}

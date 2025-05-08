@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="CourseDeadlineCounter/CourseDeadlineCounter-InfoPlist.xcstrings" source-language="en" target-language="fi" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.3" build-num="16E140"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>CourseDeadlineCounter</source>
+        <target state="translated">Kurssideadlinet</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
+        <source/>
+        <target state="translated">© Antti Juustila, 2024-2025</target>
+        <note>Copyright (human-readable)</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="CourseDeadlineCounter/Localizable.xcstrings" source-language="en" target-language="fi" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.3" build-num="16E140"/>
+    </header>
+    <body>
+      <trans-unit id=" Course is now %lld days old, %@ left to go." xml:space="preserve">
+        <source> Course is now %1$lld days old, %2$@ left to go.</source>
+        <target state="translated"> Kurssi on nyt %1$lld päivää vanha, %2$@ jäljellä</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id=" Starts in %lld days" xml:space="preserve">
+        <source> Starts in %lld days</source>
+        <target state="translated"> Aloitus %lld päivän kuluttua</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <target state="translated">%@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ calendar time left" xml:space="preserve">
+        <source>%@ calendar time left</source>
+        <target state="translated">%@ kalenteriajasta jäljellä</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld days before deadline" xml:space="preserve">
+        <source>%lld days before deadline</source>
+        <target state="translated">%lld päivää ennen deadlinea</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="A goal to reach in the course" xml:space="preserve">
+        <source>A goal to reach in the course</source>
+        <target state="translated">Kurssilla saavutettavan deadlinen kuvaus</target>
+        <note>String to put to a new deadline for user to edit</note>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target state="translated">Peruuta</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Confirm Delete" xml:space="preserve">
+        <source>Confirm Delete</source>
+        <target state="translated">Vahvista poisto</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Could not save Course" xml:space="preserve">
+        <source>Could not save Course</source>
+        <target state="translated">Kurssia ei voitu tallentaa</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Could not save deadline" xml:space="preserve">
+        <source>Could not save deadline</source>
+        <target state="translated">Deadlinea ei voitu tallentaa</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course name:" xml:space="preserve">
+        <source>Course name:</source>
+        <target state="translated">Kurssin nimi:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course start date is %@" xml:space="preserve">
+        <source>Course start date is %@</source>
+        <target state="translated">Kurssin aloituspäivä on %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadline becomes a hot thing" xml:space="preserve">
+        <source>Deadline becomes a hot thing</source>
+        <target state="translated">Deadlinesta tulee kuuma</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadline goal:" xml:space="preserve">
+        <source>Deadline goal:</source>
+        <target state="translated">Deadlinen tavoite:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadlines for course" xml:space="preserve">
+        <source>Deadlines for course</source>
+        <target state="translated">Kurssin deadlinet</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete" xml:space="preserve">
+        <source>Delete</source>
+        <target state="translated">Poista</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete Deadline" xml:space="preserve">
+        <source>Delete Deadline</source>
+        <target state="translated">Poista deadlne</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete course" xml:space="preserve">
+        <source>Delete course</source>
+        <target state="translated">Poista kurssi</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete deadline" xml:space="preserve">
+        <source>Delete deadline</source>
+        <target state="translated">Poista deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete this deadline?" xml:space="preserve">
+        <source>Delete this deadline?</source>
+        <target state="translated">Poistetaanko deadline?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit" xml:space="preserve">
+        <source>Edit</source>
+        <target state="translated">Muokkaa</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit Course" xml:space="preserve">
+        <source>Edit Course</source>
+        <target state="translated">Muokkaa kurssia</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit Deadline" xml:space="preserve">
+        <source>Edit Deadline</source>
+        <target state="translated">Muokkaa Deadlinea</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit deadline" xml:space="preserve">
+        <source>Edit deadline</source>
+        <target state="translated">Muokkaa deadlinea</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Error" xml:space="preserve">
+        <source>Error</source>
+        <target state="translated">Virhe</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="If deadline is not met, course is considered failed or grade is lowered" xml:space="preserve">
+        <source>If deadline is not met, course is considered failed or grade is lowered</source>
+        <target state="translated">Jos deadline missaa, kurssisuoritus keskeytyy tai arvosana alenee</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Is deal breaker?" xml:space="preserve">
+        <source>Is deal breaker?</source>
+        <target state="translated">Vaikuttaa arvosteluun?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="New Course" xml:space="preserve">
+        <source>New Course</source>
+        <target state="translated">Uusi kurssi</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="New Deadline" xml:space="preserve">
+        <source>New Deadline</source>
+        <target state="translated">Uusi deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SF Symbol name:" xml:space="preserve">
+        <source>SF Symbol name:</source>
+        <target state="translated">SF Symbolin nimi:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Save" xml:space="preserve">
+        <source>Save</source>
+        <target state="translated">Tallenna</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="See SF Symbols app for available symbols" xml:space="preserve">
+        <source>See SF Symbols app for available symbols</source>
+        <target state="translated">Katso symboleita SF Symbols -apista</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Set deadline:" xml:space="preserve">
+        <source>Set deadline:</source>
+        <target state="translated">Aseta deadline:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start date:" xml:space="preserve">
+        <source>Start date:</source>
+        <target state="translated">Aloituspäivä:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="ago" xml:space="preserve">
+        <source>ago</source>
+        <target state="translated">sitten</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="left" xml:space="preserve">
+        <source>left</source>
+        <target state="translated">kuluttua</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="📅 %@ calendar time left" xml:space="preserve">
+        <source>📅 %@ calendar time left</source>
+        <target state="translated">%@ kalenteriajasta jäljellä</target>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

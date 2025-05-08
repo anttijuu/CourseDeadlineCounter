@@ -1,6 +1,32 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " Course is now %lld days old, %@ left to go." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : " Course is now %1$lld days old, %2$@ left to go."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Kurssi on nyt %1$lld päivää vanha, %2$@ jäljellä"
+          }
+        }
+      }
+    },
+    " Starts in %lld days" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Aloitus %lld päivän kuluttua"
+          }
+        }
+      }
+    },
     "%@" : {
       "localizations" : {
         "fi" : {
@@ -11,12 +37,12 @@
         }
       }
     },
-    "%@ of course time left" : {
+    "%@ calendar time left" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ aikaa jäljellä deadlineen"
+            "value" : "%@ kalenteriajasta jäljellä"
           }
         }
       }
@@ -31,28 +57,23 @@
         }
       }
     },
+    "A goal to reach in the course" : {
+      "comment" : "String to put to a new deadline for user to edit",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssilla saavutettavan deadlinen kuvaus"
+          }
+        }
+      }
+    },
     "ago" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "sitten"
-          }
-        }
-      }
-    },
-    "and is now %lld days old, %@ left to go." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "and is now %1$lld days old, %2$@ left to go."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ja on nyt %1$lld päivää vanha, %2$@ prosenttia jäljellä."
           }
         }
       }
@@ -107,12 +128,12 @@
         }
       }
     },
-    "Course started %@." : {
+    "Course start date is %@" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kurssi alkoi %@"
+            "value" : "Kurssin aloituspäivä on %@"
           }
         }
       }
@@ -247,6 +268,26 @@
         }
       }
     },
+    "If deadline is not met, course is considered failed or grade is lowered" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos deadline missaa, kurssisuoritus keskeytyy tai arvosana alenee"
+          }
+        }
+      }
+    },
+    "Is deal breaker?" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaikuttaa arvosteluun?"
+          }
+        }
+      }
+    },
     "left" : {
       "localizations" : {
         "fi" : {
@@ -317,12 +358,12 @@
         }
       }
     },
-    "Started in:" : {
+    "Start date:" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Alkoi:"
+            "value" : "Aloituspäivä:"
           }
         }
       }

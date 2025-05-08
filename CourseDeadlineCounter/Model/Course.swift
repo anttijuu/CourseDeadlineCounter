@@ -28,12 +28,20 @@ class Course: Codable {
 		deadlines = []
 	}
 	
+	var hasStarted: Bool {
+		return Date.now >= startDate
+	}
+	
+	var daysToStart: Int {
+		abs(Int(Date.now.distance(to: startDate) / 86400))
+	}
+	
 	var courseAgeInDays: Int {
-		Int(Date.now.timeIntervalSince(startDate)) / 86400
+		min(Int(Date.now.timeIntervalSince(startDate)) / 86400, 0)
 	}
 	
 	func percentageLeft() -> Int {
-		return 100 - percentageReached()
+		return max(min(100 - percentageReached(), 0), 100)
 	}
 	
 	func percentageReached() -> Int {
@@ -72,6 +80,7 @@ class Course: Codable {
 //	}
 	
 	func store(to path: URL) throws {
+		deadlines.sort()
 		let fileManager = FileManager.default
 		let encoder = JSONEncoder()
 		encoder.outputFormatting = [.prettyPrinted, .sortedKeys]

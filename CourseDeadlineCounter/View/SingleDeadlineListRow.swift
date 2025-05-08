@@ -10,7 +10,7 @@ import SwiftUI
 struct SingleDeadlineListRow: View {
 	@Environment(Deadlines.self) var deadlines
 	
-	@State var deadline: Deadline
+	@Bindable var deadline: Deadline
 	
 	var body: some View {
 		HStack(spacing: 12) {
@@ -21,26 +21,32 @@ struct SingleDeadlineListRow: View {
 				.frame(width: 48)
 			VStack(alignment: .leading, spacing: 2) {
 				HStack {
+					if deadline.isDealBreaker {
+						Image(systemName: "exclamationmark.triangle.fill")
+							.foregroundStyle(.orange)
+					}
 					Text(deadline.date, style: .relative)
+						.padding(.trailing, 0)
 					Text(deadline.isReached ? "ago" : "left")
+						.padding(.leading, 0)
+					if !deadline.isReached {
+						Text("\(deadline.percentageLeft(from: deadlines.currentCourse.startDate).formatted(.percent)) calendar time left")
+							.bold()
+							.foregroundStyle(deadlineColor)
+					}
 				}
 				.font(.title3)
 				.foregroundStyle(deadlineColor)
-				if !deadline.isReached {
-					Text("\(deadline.percentageLeft(from: deadlines.currentCourse.startDate).formatted(.percent)) of course time left")
-						.font(.title2)
-						.bold()
-						.foregroundStyle(deadlineColor)
-				}
 				VStack(alignment: .leading) {
 					Text(deadline.goal)
-						.font(.title2)
+						.font(.title3)
 						.bold()
 					Text(deadline.date.formatted(date: .long, time: .shortened))
 				}
 				.foregroundStyle(deadline.isReached ? .gray : .primary)
 			}
 		}
+		.padding(.vertical, 4)
 	}
 	
 	var deadlineColor: Color {
@@ -48,6 +54,8 @@ struct SingleDeadlineListRow: View {
 			return .gray
 		} else if deadline.isHot {
 			return .red
+		} else if deadline.isDealBreaker {
+			return .orange
 		} else {
 			return .accentColor
 		}

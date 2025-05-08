@@ -1,0 +1,124 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " Course is now %lld days old, %@ left to go." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : " Course is now %1$lld days old, %2$@ left to go."
+          }
+        }
+      }
+    },
+    " Starts in %lld days" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@ calendar time left" : {
+
+    },
+    "%lld days before deadline" : {
+
+    },
+    "📅 %@ calendar time left" : {
+      "extractionState" : "stale"
+    },
+    "A goal to reach in the course" : {
+      "comment" : "String to put to a new deadline for user to edit"
+    },
+    "ago" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Confirm Delete" : {
+
+    },
+    "Could not save Course" : {
+
+    },
+    "Could not save deadline" : {
+
+    },
+    "Course name:" : {
+
+    },
+    "Course start date is %@" : {
+
+    },
+    "Deadline becomes a hot thing" : {
+
+    },
+    "Deadline goal:" : {
+
+    },
+    "Deadlines for course" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete course" : {
+
+    },
+    "Delete deadline" : {
+
+    },
+    "Delete Deadline" : {
+
+    },
+    "Delete this deadline?" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Edit Course" : {
+
+    },
+    "Edit deadline" : {
+
+    },
+    "Edit Deadline" : {
+
+    },
+    "Error" : {
+
+    },
+    "If deadline is not met, course is considered failed or grade is lowered" : {
+
+    },
+    "Is deal breaker?" : {
+
+    },
+    "left" : {
+
+    },
+    "New Course" : {
+
+    },
+    "New Deadline" : {
+
+    },
+    "Save" : {
+
+    },
+    "See SF Symbols app for available symbols" : {
+
+    },
+    "Set deadline:" : {
+
+    },
+    "SF Symbol name:" : {
+
+    },
+    "Start date:" : {
+
+    }
+  },
+  "version" : "1.0"
+}

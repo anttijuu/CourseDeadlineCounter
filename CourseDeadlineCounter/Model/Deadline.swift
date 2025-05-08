@@ -14,6 +14,7 @@ class Deadline: Codable {
 	var symbol: String
 	var goal: String
 	var becomesHotDaysBefore: Int
+	var isDealBreaker: Bool = false
 	
 	enum CodingKeys: String, CodingKey {
 		case _uuid = "uuid"
@@ -21,6 +22,7 @@ class Deadline: Codable {
 		case _symbol = "symbol"
 		case _goal = "goal"
 		case _becomesHotDaysBefore = "becomesHotDaysBefore"
+		case _isDealBreaker = "isDealBreaker"
 	}
 	
 	init(uuid: UUID = UUID(), date: Date, symbol: String, goal: String, becomesHotDaysBefore: Int) {
@@ -29,6 +31,7 @@ class Deadline: Codable {
 		self.symbol = symbol
 		self.goal = goal
 		self.becomesHotDaysBefore = becomesHotDaysBefore
+		self.isDealBreaker = false
 	}
 	
 	var isReached: Bool {
@@ -43,13 +46,13 @@ class Deadline: Codable {
 	}
 	
 	func percentageLeft(from startDate: Date) -> Int {
-		return 100 - percentageReached(from: startDate)
+		return max(min(100 - percentageReached(from: startDate), 0), 100)
 	}
 	
 	func percentageReached(from startDate: Date) -> Int {
 		let wholeSpan = date.distance(to: startDate)
 		let currentSpan = Date.now.distance(to: startDate)
-		return Int((currentSpan / wholeSpan) * 100)
+		return max(min(Int((currentSpan / wholeSpan) * 100), 0), 100)
 	}
 }
 
@@ -69,6 +72,5 @@ extension Deadline: Identifiable, Equatable, Comparable, Hashable {
 	
 	func hash(into hasher: inout Hasher) {
 		hasher.combine(uuid)
-		hasher.combine(date)
 	}
 }

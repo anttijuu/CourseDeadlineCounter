@@ -10,12 +10,6 @@
             "state" : "new",
             "value" : "CourseDeadlineCounter"
           }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurssideadlinet"
-          }
         }
       }
     },
@@ -27,12 +21,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : ""
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "© Antti Juustila, 2024-2025"
           }
         }
       }

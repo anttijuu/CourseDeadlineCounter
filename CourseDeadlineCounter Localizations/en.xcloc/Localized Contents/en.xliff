@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="CourseDeadlineCounter/CourseDeadlineCounter-InfoPlist.xcstrings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.3" build-num="16E140"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>CourseDeadlineCounter</source>
+        <target state="new">CourseDeadlineCounter</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
+        <source/>
+        <target state="new"/>
+        <note>Copyright (human-readable)</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="CourseDeadlineCounter/Localizable.xcstrings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.3" build-num="16E140"/>
+    </header>
+    <body>
+      <trans-unit id=" Course is now %lld days old, %@ left to go." xml:space="preserve">
+        <source> Course is now %1$lld days old, %2$@ left to go.</source>
+        <target state="new"> Course is now %1$lld days old, %2$@ left to go.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id=" Starts in %lld days" xml:space="preserve">
+        <source> Starts in %lld days</source>
+        <target state="new"> Starts in %lld days</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <target state="new">%@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%@ calendar time left" xml:space="preserve">
+        <source>%@ calendar time left</source>
+        <target state="new">%@ calendar time left</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="%lld days before deadline" xml:space="preserve">
+        <source>%lld days before deadline</source>
+        <target state="new">%lld days before deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="A goal to reach in the course" xml:space="preserve">
+        <source>A goal to reach in the course</source>
+        <target state="new">A goal to reach in the course</target>
+        <note>String to put to a new deadline for user to edit</note>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target state="new">Cancel</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Confirm Delete" xml:space="preserve">
+        <source>Confirm Delete</source>
+        <target state="new">Confirm Delete</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Could not save Course" xml:space="preserve">
+        <source>Could not save Course</source>
+        <target state="new">Could not save Course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Could not save deadline" xml:space="preserve">
+        <source>Could not save deadline</source>
+        <target state="new">Could not save deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course name:" xml:space="preserve">
+        <source>Course name:</source>
+        <target state="new">Course name:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course start date is %@" xml:space="preserve">
+        <source>Course start date is %@</source>
+        <target state="new">Course start date is %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadline becomes a hot thing" xml:space="preserve">
+        <source>Deadline becomes a hot thing</source>
+        <target state="new">Deadline becomes a hot thing</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadline goal:" xml:space="preserve">
+        <source>Deadline goal:</source>
+        <target state="new">Deadline goal:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Deadlines for course" xml:space="preserve">
+        <source>Deadlines for course</source>
+        <target state="new">Deadlines for course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete" xml:space="preserve">
+        <source>Delete</source>
+        <target state="new">Delete</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete Deadline" xml:space="preserve">
+        <source>Delete Deadline</source>
+        <target state="new">Delete Deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete course" xml:space="preserve">
+        <source>Delete course</source>
+        <target state="new">Delete course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete deadline" xml:space="preserve">
+        <source>Delete deadline</source>
+        <target state="new">Delete deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete this deadline?" xml:space="preserve">
+        <source>Delete this deadline?</source>
+        <target state="new">Delete this deadline?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit" xml:space="preserve">
+        <source>Edit</source>
+        <target state="new">Edit</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit Course" xml:space="preserve">
+        <source>Edit Course</source>
+        <target state="new">Edit Course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit Deadline" xml:space="preserve">
+        <source>Edit Deadline</source>
+        <target state="new">Edit Deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Edit deadline" xml:space="preserve">
+        <source>Edit deadline</source>
+        <target state="new">Edit deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Error" xml:space="preserve">
+        <source>Error</source>
+        <target state="new">Error</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="If deadline is not met, course is considered failed or grade is lowered" xml:space="preserve">
+        <source>If deadline is not met, course is considered failed or grade is lowered</source>
+        <target state="new">If deadline is not met, course is considered failed or grade is lowered</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Is deal breaker?" xml:space="preserve">
+        <source>Is deal breaker?</source>
+        <target state="new">Is deal breaker?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="New Course" xml:space="preserve">
+        <source>New Course</source>
+        <target state="new">New Course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="New Deadline" xml:space="preserve">
+        <source>New Deadline</source>
+        <target state="new">New Deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="SF Symbol name:" xml:space="preserve">
+        <source>SF Symbol name:</source>
+        <target state="new">SF Symbol name:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Save" xml:space="preserve">
+        <source>Save</source>
+        <target state="new">Save</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="See SF Symbols app for available symbols" xml:space="preserve">
+        <source>See SF Symbols app for available symbols</source>
+        <target state="new">See SF Symbols app for available symbols</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Set deadline:" xml:space="preserve">
+        <source>Set deadline:</source>
+        <target state="new">Set deadline:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start date:" xml:space="preserve">
+        <source>Start date:</source>
+        <target state="new">Start date:</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="ago" xml:space="preserve">
+        <source>ago</source>
+        <target state="new">ago</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="left" xml:space="preserve">
+        <source>left</source>
+        <target state="new">left</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="📅 %@ calendar time left" xml:space="preserve">
+        <source>📅 %@ calendar time left</source>
+        <target state="new">📅 %@ calendar time left</target>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

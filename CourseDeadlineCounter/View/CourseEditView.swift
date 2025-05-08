@@ -26,7 +26,7 @@ struct CourseEditView: View {
 				.font(.title)
 			Form {
 				TextField("Course name:", text: $editCourseName)
-				DatePicker("Started in:", selection: $editStartDate, displayedComponents: [.date])
+				DatePicker("Start date:", selection: $editStartDate, displayedComponents: [.date])
 			}
 			Spacer()
 			Button("Save", action: {

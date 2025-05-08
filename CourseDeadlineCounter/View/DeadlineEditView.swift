@@ -10,7 +10,7 @@ import SwiftUI
 struct DeadlineEditView: View {
 	@Environment(Deadlines.self) var deadlines
 	
-	@Binding var deadline: Deadline?
+	@Bindable var deadline: Deadline
 	
 	@Environment(\.dismiss) var dismiss
 
@@ -18,6 +18,7 @@ struct DeadlineEditView: View {
 	@State var editDeadlineGoal: String = ""
 	@State var editDeadline: Date = .now
 	@State var editDaysComesHot: Int = 14
+	@State var editIsDealBreaker: Bool = false
 	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
@@ -45,6 +46,9 @@ struct DeadlineEditView: View {
 					}
 					Text("\(editDaysComesHot) days before deadline")
 				}
+				Toggle("Is deal breaker?", isOn: $editIsDealBreaker)
+				Text("If deadline is not met, course is considered failed or grade is lowered")
+					.font(.caption)
 			}
 			Spacer()
 			Button("Save", action: {
@@ -58,12 +62,11 @@ struct DeadlineEditView: View {
 		}
 		.padding()
 		.onAppear {
-			if let deadline {
-				editSymbolName = deadline.symbol
-				editDeadlineGoal = deadline.goal
-				editDeadline = deadline.date
-				editDaysComesHot = deadline.becomesHotDaysBefore
-			}
+			editSymbolName = deadline.symbol
+			editDeadlineGoal = deadline.goal
+			editDeadline = deadline.date
+			editDaysComesHot = deadline.becomesHotDaysBefore
+			editIsDealBreaker = deadline.isDealBreaker
 		}
 		.alert("Could not save deadline", isPresented: $isError, actions: {
 			// No action
@@ -73,13 +76,12 @@ struct DeadlineEditView: View {
 	}
 	
 	private func save() throws {
-		if let deadline {
-			deadline.date = editDeadline
-			deadline.symbol = editSymbolName
-			deadline.goal = editDeadlineGoal
-			deadline.becomesHotDaysBefore = editDaysComesHot
-			try deadlines.currentCourse.store(to: Deadlines.storagePath)
-		}
+		deadline.date = editDeadline
+		deadline.symbol = editSymbolName
+		deadline.goal = editDeadlineGoal
+		deadline.becomesHotDaysBefore = editDaysComesHot
+		deadline.isDealBreaker = editIsDealBreaker
+		try deadlines.currentCourse.store(to: Deadlines.storagePath)
 		dismiss()
 	}
 }
