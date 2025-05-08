@@ -10,7 +10,7 @@ This tool was built for teachers to show, in one small screen, all the relevant 
 
 Some notes about the deadlines visible in the example below:
 
-![App screenshot](screenshot.pnt)
+![App screenshot](screenshot.png)
 
 * Deadlines are sorted by the date, nearest first.
 * Deadlines highlighted in red are *approaching soon*. 
@@ -21,6 +21,8 @@ Some notes about the deadlines visible in the example below:
 * You can switch between the courses you have entered, using the drop down list.
 
 The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`, each course stored in separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again.
+
+Additional benefit of using JSON as the file format is that anyone can implement a similar app with any other language to whichever platform they prefer, supporting this file format.
 
 ## Adding or editing a course
 
