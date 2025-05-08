@@ -23,9 +23,6 @@
     "%lld days before deadline" : {
 
     },
-    "📅 %@ calendar time left" : {
-      "extractionState" : "stale"
-    },
     "A goal to reach in the course" : {
       "comment" : "String to put to a new deadline for user to edit"
     },
@@ -33,9 +30,12 @@
 
     },
     "Cancel" : {
-
+      "extractionState" : "stale"
     },
     "Confirm Delete" : {
+
+    },
+    "Could not delete the file: %@" : {
 
     },
     "Could not save Course" : {
@@ -48,6 +48,9 @@
 
     },
     "Course start date is %@" : {
+
+    },
+    "Date issue: %@" : {
 
     },
     "Deadline becomes a hot thing" : {
@@ -71,7 +74,13 @@
     "Delete Deadline" : {
 
     },
+    "Delete this course? This cannot be undone" : {
+
+    },
     "Delete this deadline?" : {
+      "extractionState" : "stale"
+    },
+    "Delete this deadline? This cannot be undone." : {
 
     },
     "Edit" : {
@@ -89,6 +98,12 @@
     "Error" : {
 
     },
+    "Failed to save the course deadlines, please check app permissions." : {
+      "comment" : "When trying to save the deadline file"
+    },
+    "File does not exist, cannot read it." : {
+      "comment" : "When reading course deadline file"
+    },
     "If deadline is not met, course is considered failed or grade is lowered" : {
 
     },
@@ -99,7 +114,7 @@
 
     },
     "New Course" : {
-
+      "comment" : "User is creating a new course"
     },
     "New Deadline" : {
 

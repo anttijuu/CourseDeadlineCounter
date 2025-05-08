@@ -11,8 +11,8 @@
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source/>
-        <target state="translated">© Antti Juustila, 2024-2025</target>
+        <source>(c) Antti Juustila, 2024-2025</source>
+        <target state="translated">(c) Antti Juustila, 2024-2025</target>
         <note>Copyright (human-readable)</note>
       </trans-unit>
     </body>
@@ -62,6 +62,11 @@
         <target state="translated">Vahvista poisto</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Could not delete the file: %@" xml:space="preserve">
+        <source>Could not delete the file: %@</source>
+        <target state="translated">Tiedostoa ei voitu poistaa: %@</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="Could not save Course" xml:space="preserve">
         <source>Could not save Course</source>
         <target state="translated">Kurssia ei voitu tallentaa</target>
@@ -80,6 +85,11 @@
       <trans-unit id="Course start date is %@" xml:space="preserve">
         <source>Course start date is %@</source>
         <target state="translated">Kurssin aloituspäivä on %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Date issue: %@" xml:space="preserve">
+        <source>Date issue: %@</source>
+        <target state="translated">Päivämääräongelma: %@</target>
         <note/>
       </trans-unit>
       <trans-unit id="Deadline becomes a hot thing" xml:space="preserve">
@@ -117,9 +127,19 @@
         <target state="translated">Poista deadline</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Delete this course? This cannot be undone" xml:space="preserve">
+        <source>Delete this course? This cannot be undone</source>
+        <target state="translated">Poista tämä kurssi? Tätä ei voi perua.</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="Delete this deadline?" xml:space="preserve">
         <source>Delete this deadline?</source>
         <target state="translated">Poistetaanko deadline?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete this deadline? This cannot be undone." xml:space="preserve">
+        <source>Delete this deadline? This cannot be undone.</source>
+        <target state="translated">Poista tämä deadline? Tätä ei voi perua.</target>
         <note/>
       </trans-unit>
       <trans-unit id="Edit" xml:space="preserve">
@@ -147,6 +167,16 @@
         <target state="translated">Virhe</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Failed to save the course deadlines, please check app permissions." xml:space="preserve">
+        <source>Failed to save the course deadlines, please check app permissions.</source>
+        <target state="translated">Tietoja deadlineista ei voitu tallentaa, tarkista annoitko sovellukselle luvan käyttää Dokumentit -kansiota.</target>
+        <note>When trying to save the deadline file</note>
+      </trans-unit>
+      <trans-unit id="File does not exist, cannot read it." xml:space="preserve">
+        <source>File does not exist, cannot read it.</source>
+        <target state="translated">Tiedostoa ei voi lukea koska sitä ei ole olemassa.</target>
+        <note>When reading course deadline file</note>
+      </trans-unit>
       <trans-unit id="If deadline is not met, course is considered failed or grade is lowered" xml:space="preserve">
         <source>If deadline is not met, course is considered failed or grade is lowered</source>
         <target state="translated">Jos deadline missaa, kurssisuoritus keskeytyy tai arvosana alenee</target>
@@ -160,7 +190,7 @@
       <trans-unit id="New Course" xml:space="preserve">
         <source>New Course</source>
         <target state="translated">Uusi kurssi</target>
-        <note/>
+        <note>User is creating a new course</note>
       </trans-unit>
       <trans-unit id="New Deadline" xml:space="preserve">
         <source>New Deadline</source>
@@ -200,11 +230,6 @@
       <trans-unit id="left" xml:space="preserve">
         <source>left</source>
         <target state="translated">kuluttua</target>
-        <note/>
-      </trans-unit>
-      <trans-unit id="📅 %@ calendar time left" xml:space="preserve">
-        <source>📅 %@ calendar time left</source>
-        <target state="translated">%@ kalenteriajasta jäljellä</target>
         <note/>
       </trans-unit>
     </body>

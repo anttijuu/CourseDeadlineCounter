@@ -79,6 +79,7 @@
       }
     },
     "Cancel" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -94,6 +95,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vahvista poisto"
+          }
+        }
+      }
+    },
+    "Could not delete the file: %@" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiedostoa ei voitu poistaa: %@"
           }
         }
       }
@@ -134,6 +145,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kurssin aloituspäivä on %@"
+          }
+        }
+      }
+    },
+    "Date issue: %@" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivämääräongelma: %@"
           }
         }
       }
@@ -208,12 +229,33 @@
         }
       }
     },
+    "Delete this course? This cannot be undone" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista tämä kurssi? Tätä ei voi perua."
+          }
+        }
+      }
+    },
     "Delete this deadline?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poistetaanko deadline?"
+          }
+        }
+      }
+    },
+    "Delete this deadline? This cannot be undone." : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista tämä deadline? Tätä ei voi perua."
           }
         }
       }
@@ -268,6 +310,28 @@
         }
       }
     },
+    "Failed to save the course deadlines, please check app permissions." : {
+      "comment" : "When trying to save the deadline file",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tietoja deadlineista ei voitu tallentaa, tarkista annoitko sovellukselle luvan käyttää Dokumentit -kansiota."
+          }
+        }
+      }
+    },
+    "File does not exist, cannot read it." : {
+      "comment" : "When reading course deadline file",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiedostoa ei voi lukea koska sitä ei ole olemassa."
+          }
+        }
+      }
+    },
     "If deadline is not met, course is considered failed or grade is lowered" : {
       "localizations" : {
         "fi" : {
@@ -299,6 +363,7 @@
       }
     },
     "New Course" : {
+      "comment" : "User is creating a new course",
       "localizations" : {
         "fi" : {
           "stringUnit" : {

@@ -12,9 +12,9 @@ struct CourseEditView: View {
 	
 	@Environment(\.dismiss) var dismiss
 		
-	var course: Course?
+	var course: Course
 	
-	@State var editCourseName: String = "New Course"
+	@State var editCourseName: String = NSLocalizedString("New Course", comment: "User is creating a new course")
 	@State var editStartDate: Date = Date.now
 
 	@State var isError: Bool = false
@@ -41,10 +41,8 @@ struct CourseEditView: View {
 		}
 		.padding()
 		.onAppear {
-			if let course {
-				editCourseName = course.name
-				editStartDate = course.startDate
-			}
+			editCourseName = course.name
+			editStartDate = course.startDate
 		}
 		.alert("Could not save Course", isPresented: $isError, actions: {
 			// No action
@@ -54,7 +52,14 @@ struct CourseEditView: View {
 	}
 	
 	private func save() throws {
-		let editedCourse = Course(name: editCourseName, startDate: editStartDate)
-		try deadlines.saveCourse(for: editedCourse, with: editedCourse.name != course!.name ? course!.name : nil)
+		let oldCourseName = course.name
+		let newCourseName = editCourseName
+		course.name = newCourseName
+		course.startDate = editStartDate
+		if oldCourseName != newCourseName {
+			try deadlines.saveCourse(for: course, oldName: oldCourseName)
+		} else {
+			try deadlines.saveCourse(for: course)
+		}
 	}
 }

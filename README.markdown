@@ -4,7 +4,7 @@
 
 Course Deadlines is a tool that instructors can use to make course deadlines more visible to students, throughout the course implementation. Students may also use the same app, and add their own deadlines to the app also, for all the courses they are taking.
 
-> The app is localized to English and Finnish, the screenshots in this document are in Finnish.
+⚠️ The app is localized to English and Finnish, the screenshots in this document are in Finnish.
 
 ## What For?
 
@@ -58,7 +58,11 @@ If you wish to delete a deadline, select the row, swipe left and press the delet
 
 ![delete deadline](delete-row-screenshot.png)
 
- 
+
+## Contributing
+
+If you find any bugs, please report them to me, either by using the GitHub Issues or send me a message. You may also fork the repo, create a branch, fix the bug, create and issue here and then submit a pull request from your branch fixing the issue.
+
 ## License
 
 * (c) Antti Juustila, 2024-2025

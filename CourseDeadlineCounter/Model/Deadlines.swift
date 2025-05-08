@@ -11,11 +11,20 @@ import Foundation
 class Deadlines {
 	
 	static private(set) var storagePath: URL = URL.documentsDirectory
+	private static var counter = 0
+
 	var courses: [String] = []
-	var currentCourse = Course(name: "---", startDate: Date.now)
-	var selectedCourse: String = ""
-	
+	var currentCourse = Course(
+		name: NSLocalizedString("<New Course \(Deadlines.counter)>", comment: "String shown when a new course is created"),
+		startDate: Date.now
+	)
+	var selectedCourseName: String = ""
+
 	init() {
+		selectedCourseName = currentCourse.name
+	}
+	
+	func readCourseList() throws {
 		Self.storagePath = URL.documentsDirectory.appending(component: "CourseDeadlines", directoryHint: .isDirectory)
 		do {
 			let gotAccess = Self.storagePath.startAccessingSecurityScopedResource()
@@ -36,36 +45,46 @@ class Deadlines {
 					}
 				}
 			}
-			courses.sort()
 			if !courses.isEmpty {
-				selectedCourse = courses[0]
+				courses.sort()
+				selectedCourseName = courses[0]
+				try loadDeadlines(for: courses[0])
+			}
+		}
+	}
+		
+	func newCourse() -> Course {
+		Deadlines.counter += 1
+		return Course(
+			name: NSLocalizedString("<New Course \(Deadlines.counter)>", comment: "String shown when a new course is created"),
+			startDate: Date.now
+		)
+	}
+	
+	func deleteCurrentCourse() throws {
+		do {
+			try deleteFile(for: currentCourse.name)
+			courses.removeAll(where: { $0 == currentCourse.name })
+			if courses.isEmpty {
+				currentCourse = Course(
+					name: NSLocalizedString("<New Course \(Deadlines.counter)>", comment: "String shown when a new course is created"),
+					startDate: Date.now
+				)
+				selectedCourseName = currentCourse.name
+				courses.append(currentCourse.name)
+			} else {
 				try loadDeadlines(for: courses[0])
 			}
 		} catch {
-			print("Error in restoring deadlines for course \(courses[0]) because \(error.localizedDescription)")
+			print("Error in deleting course \(currentCourse.name) because \(error.localizedDescription)")
+			throw DeadlineErrors.fileDeleteError(error.localizedDescription)
 		}
 	}
-	
-	func newCourse() {
-		currentCourse.name = "---"
-		currentCourse.startDate = Date.now
-		currentCourse.deadlines.removeAll()
-		currentCourse.uuid = UUID()
-	}
-	
-	func deleteCourse() {
-		if currentCourse.name != "---" {
-			let coursePath = Self.storagePath.appending(path: currentCourse.name + ".json")
-			do {
-				try FileManager.default.removeItem(at: coursePath)
-				courses.removeAll(where: { $0 == currentCourse.name })
-				currentCourse.name = "---"
-				currentCourse.deadlines = []
-				currentCourse.startDate = .now
-				currentCourse.uuid = UUID()
-			} catch {
-				print("Error in deleting course \(currentCourse.name) because \(error.localizedDescription)")
-			}
+		
+	private func deleteFile(for course: String) throws {
+		let coursePath = Self.storagePath.appending(path: course + ".json")
+		if FileManager.default.fileExists(atPath: coursePath.path(percentEncoded: false)){
+			try FileManager.default.removeItem(at: coursePath)
 		}
 	}
 	
@@ -76,17 +95,28 @@ class Deadlines {
 		_ = try currentCourse.restore(from: Self.storagePath, for: courseName)
 	}
 	
-	func saveCourse(for course: Course, with oldName: String? = nil) throws {
-		if let oldName {
-			if currentCourse.name != oldName {
-				courses.removeAll(where: { $0 == oldName })
-			}
+	func saveCourse(for course: Course, oldName: String) throws {
+		try course.store(to: Self.storagePath)
+		try deleteFile(for: oldName)
+		currentCourse = course
+		selectedCourseName = currentCourse.name
+		if courses.contains(oldName) {
+			courses.removeAll(where: { $0 == oldName })
 		}
 		if !courses.contains(course.name) {
 			courses.append(course.name)
+			courses.sort()
+		}
+	}
+
+	func saveCourse(for course: Course) throws {
+		if !courses.contains(course.name) {
+			courses.append(course.name)
+			courses.sort()
 		}
 		try course.store(to: Self.storagePath)
-		// currentCourse = course
+		currentCourse = course
+		selectedCourseName = currentCourse.name
 	}
-	
+
 }
