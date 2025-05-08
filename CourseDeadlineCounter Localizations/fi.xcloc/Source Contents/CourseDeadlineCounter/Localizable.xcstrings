@@ -29,9 +29,6 @@
     "ago" : {
 
     },
-    "Cancel" : {
-      "extractionState" : "stale"
-    },
     "Confirm Delete" : {
 
     },
@@ -74,12 +71,6 @@
     "Delete Deadline" : {
 
     },
-    "Delete this course? This cannot be undone" : {
-
-    },
-    "Delete this deadline?" : {
-      "extractionState" : "stale"
-    },
     "Delete this deadline? This cannot be undone." : {
 
     },
@@ -90,7 +81,7 @@
 
     },
     "Edit deadline" : {
-
+      "extractionState" : "stale"
     },
     "Edit Deadline" : {
 
@@ -111,6 +102,9 @@
 
     },
     "left" : {
+
+    },
+    "Move this course to Trash?" : {
 
     },
     "New Course" : {

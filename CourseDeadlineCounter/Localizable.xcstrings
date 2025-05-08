@@ -78,17 +78,6 @@
         }
       }
     },
-    "Cancel" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Peruuta"
-          }
-        }
-      }
-    },
     "Confirm Delete" : {
       "localizations" : {
         "fi" : {
@@ -229,27 +218,6 @@
         }
       }
     },
-    "Delete this course? This cannot be undone" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poista tämä kurssi? Tätä ei voi perua."
-          }
-        }
-      }
-    },
-    "Delete this deadline?" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poistetaanko deadline?"
-          }
-        }
-      }
-    },
     "Delete this deadline? This cannot be undone." : {
       "localizations" : {
         "fi" : {
@@ -276,16 +244,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muokkaa kurssia"
-          }
-        }
-      }
-    },
-    "Edit deadline" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Muokkaa deadlinea"
           }
         }
       }
@@ -358,6 +316,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "kuluttua"
+          }
+        }
+      }
+    },
+    "Move this course to Trash?" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siirrä kurssi Roskakoriin?"
           }
         }
       }

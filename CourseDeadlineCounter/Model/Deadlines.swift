@@ -6,6 +6,12 @@
 //
 
 import Foundation
+import AppKit
+
+// TODO: Observe document folder for new files, reload list if changes in files.
+// TODO: Add logging
+// TODO: New screenshots
+// TODO: Consider GUI choices, should change to hierarchical lists like GitLogVisualized with toolbar buttons?
 
 @Observable
 class Deadlines {
@@ -73,7 +79,8 @@ class Deadlines {
 				selectedCourseName = currentCourse.name
 				courses.append(currentCourse.name)
 			} else {
-				try loadDeadlines(for: courses[0])
+				selectedCourseName = courses[0]
+				try loadDeadlines(for: selectedCourseName)
 			}
 		} catch {
 			print("Error in deleting course \(currentCourse.name) because \(error.localizedDescription)")
@@ -83,8 +90,15 @@ class Deadlines {
 		
 	private func deleteFile(for course: String) throws {
 		let coursePath = Self.storagePath.appending(path: course + ".json")
+		var removeError: Error?
 		if FileManager.default.fileExists(atPath: coursePath.path(percentEncoded: false)){
-			try FileManager.default.removeItem(at: coursePath)
+			NSWorkspace.shared.recycle([coursePath]) { trashedFiles, error in
+				guard let error = error else { return }
+				removeError = error
+			}
+			if let removeError {
+				throw DeadlineErrors.fileDeleteError(removeError.localizedDescription)
+			}
 		}
 	}
 	

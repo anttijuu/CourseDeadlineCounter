@@ -28,7 +28,7 @@ struct DeadlineEditView: View {
 	
 	var body: some View {
 		VStack(spacing: 8) {
-			Text("Edit deadline")
+			Text("Edit Deadline")
 				.font(.title)
 			Form {
 				TextField("SF Symbol name:", text: $editSymbolName)

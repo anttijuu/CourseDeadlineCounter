@@ -7,20 +7,17 @@
 
 import SwiftUI
 
-// TODO: Add confirmation alert to removing a course!
-
-
 struct ContentView: View {
 	@Environment(Deadlines.self) var deadlines
 	
 	@State var showDeadlineEditView: Bool = false
 	@State var showCourseEditView: Bool = false
+	@State var showNewCourseView: Bool = false
 	@State var editingNewCourse = false
 	@State var deleteDeadlineAlert: Bool = false
 	@State var deleteCourseAlert: Bool = false
 	
 	@State var selectedDeadline: Deadline? = nil
-	// @State var selectedCourseName: String
 	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
@@ -63,10 +60,17 @@ struct ContentView: View {
 			Spacer()
 			HStack {
 				Button("New Course") {
-					editingNewCourse = true
+					showNewCourseView.toggle();
+				}
+				Button("Edit Course") {
 					showCourseEditView.toggle();
 				}
-				Button("Delete course") {
+				Button("New Deadline") {
+					let newDeadline = Deadline(date: deadlines.currentCourse.startDate.addingTimeInterval(60*60*24*30), symbol: "pencil.and.list.clipboard", goal: NSLocalizedString("A goal to reach in the course", comment: "String to put to a new deadline for user to edit"), becomesHotDaysBefore: 7)
+					deadlines.currentCourse.deadlines.append(newDeadline)
+				}
+				Spacer()
+				Button("Delete course", role: .destructive) {
 					deleteCourseAlert.toggle()
 				}
 				.alert("Confirm Delete",
@@ -83,15 +87,7 @@ struct ContentView: View {
 						Text("Delete course")
 					}
 				} message: {
-					Text("Delete this course? This cannot be undone")
-				}
-				Button("Edit Course") {
-					editingNewCourse = false
-					showCourseEditView.toggle();
-				}
-				Button("New Deadline") {
-					let newDeadline = Deadline(date: deadlines.currentCourse.startDate.addingTimeInterval(60*60*24*30), symbol: "pencil.and.list.clipboard", goal: NSLocalizedString("A goal to reach in the course", comment: "String to put to a new deadline for user to edit"), becomesHotDaysBefore: 7)
-					deadlines.currentCourse.deadlines.append(newDeadline)
+					Text("Move this course to Trash?")
 				}
 			}
 			.buttonStyle(PrimaryButtonStyle())
@@ -125,16 +121,15 @@ struct ContentView: View {
 						.frame(minWidth: 600, minHeight: 400)
 				}
 			}
+			.sheet(isPresented: $showNewCourseView) {
+				CourseEditView(course: deadlines.newCourse())
+					.environment(deadlines)
+					.frame(minWidth: 600, minHeight: 400)
+			}
 			.sheet(isPresented: $showCourseEditView) {
-				if editingNewCourse {
-					CourseEditView(course: deadlines.newCourse())
-						.environment(deadlines)
-						.frame(minWidth: 600, minHeight: 400)
-				} else {
-					CourseEditView(course: deadlines.currentCourse)
-						.environment(deadlines)
-						.frame(minWidth: 600, minHeight: 400)
-				}
+				CourseEditView(course: deadlines.currentCourse)
+					.environment(deadlines)
+					.frame(minWidth: 600, minHeight: 400)
 			}
 			.alert("Error", isPresented: $isError, actions: {
 				// No action

@@ -52,11 +52,6 @@
         <target state="new">A goal to reach in the course</target>
         <note>String to put to a new deadline for user to edit</note>
       </trans-unit>
-      <trans-unit id="Cancel" xml:space="preserve">
-        <source>Cancel</source>
-        <target state="new">Cancel</target>
-        <note/>
-      </trans-unit>
       <trans-unit id="Confirm Delete" xml:space="preserve">
         <source>Confirm Delete</source>
         <target state="new">Confirm Delete</target>
@@ -127,16 +122,6 @@
         <target state="new">Delete deadline</target>
         <note/>
       </trans-unit>
-      <trans-unit id="Delete this course? This cannot be undone" xml:space="preserve">
-        <source>Delete this course? This cannot be undone</source>
-        <target state="new">Delete this course? This cannot be undone</target>
-        <note/>
-      </trans-unit>
-      <trans-unit id="Delete this deadline?" xml:space="preserve">
-        <source>Delete this deadline?</source>
-        <target state="new">Delete this deadline?</target>
-        <note/>
-      </trans-unit>
       <trans-unit id="Delete this deadline? This cannot be undone." xml:space="preserve">
         <source>Delete this deadline? This cannot be undone.</source>
         <target state="new">Delete this deadline? This cannot be undone.</target>
@@ -185,6 +170,11 @@
       <trans-unit id="Is deal breaker?" xml:space="preserve">
         <source>Is deal breaker?</source>
         <target state="new">Is deal breaker?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Move this course to Trash?" xml:space="preserve">
+        <source>Move this course to Trash?</source>
+        <target state="new">Move this course to Trash?</target>
         <note/>
       </trans-unit>
       <trans-unit id="New Course" xml:space="preserve">

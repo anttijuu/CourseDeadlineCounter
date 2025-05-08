@@ -2,15 +2,15 @@
 
 ## What Is This?
 
-Course Deadlines is a tool that instructors can use to make course deadlines more visible to students, throughout the course implementation. Students may also use the same app, and add their own deadlines to the app also, for all the courses they are taking.
+Course Deadlines is a tool that instructors can use to make course deadlines more visible to students, keeping everybody aware of the deadlines, throughout the course implementation. Students may also use the same app, and add their own deadlines to the app also, for all the courses they are taking.
 
-⚠️ The app is localized to English and Finnish, the screenshots in this document are in Finnish.
+⚠️ The app is localized to English and Finnish, the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
 
 ## What For?
 
-Many times it happens that deadlines are announced at the introductory lecture of the course. Even though the deadlines are also in the materials and/or the course website, it sometimes may happen that when the deadline comes, there are some who are surprised that it "came so soon" and the assignments are not even nearly ready.
+Course deadlines are usually announced at the introductory lecture of the course. Even though the deadlines are also in the materials and/or the course website, it sometimes may happen that when the deadline comes, there are some who are surprised that it "came so soon". The assignments are not even nearly ready, which causes issues in passing the courses and stressful situations.
 
-This tool was built for teachers to show, in one small screen, all the relevant course deadlines. For example, in opening the weekly lecture, the teacher can share the app screen and remind the students about the upcoming deadlines as well as other later deadlines.
+This tool was built for teachers to show all the relevant course deadlines in one list. For example, in opening the weekly lecture, the teacher can share the app screen and remind the students about the upcoming deadlines as well as other later deadlines.
 
 > Note that the app (currently) does not notify or alert about upcoming deadlines, just displays them.
 
@@ -21,13 +21,13 @@ Some notes about the deadlines visible in the example below:
 ![App screenshot](screenshot.png)
 
 * Deadlines are sorted by the date, last one at the end.
+* You can switch between the courses you have added, using the drop down list.
 * Past deadlines are shown in gray, future deadlines with default accent color, unless conditions described below apply.
 * Deadlines highlighted in red are *approaching soon*. 
   * When entering the deadline to the course, you can specify how many days before the deadline becomes so important that it should be highlighed.
-* Deadlines in orange and with the warning symbol are directly impacting the course success, if they are missed.
+* Deadlines in orange and with the warning symbol are directly impacting the course success, when they are missed.
   * If the deadline is missed, either the course is failed or missing it impacts the grade (to worse, obviously). See below for additional discussion on this.
 * The symbol for the deadline is something you can specify yourself, using Apple's [SF symbols](https://developer.apple.com/sf-symbols/). See details below.
-* You can switch between the courses you have entered, using the drop down list.
 * Use the buttons on top to create a new course, remove the currently selected course, edit the course or add a new deadline to the course.
 
 The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`, each course stored in separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again.
