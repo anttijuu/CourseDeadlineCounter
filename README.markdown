@@ -12,11 +12,12 @@ Some notes about the deadlines visible in the example below:
 
 ![App screenshot](screenshot.png)
 
-* Deadlines are sorted by the date, nearest first.
+* Deadlines are sorted by the date, last one at the end.
+* Past deadlines are shown in gray, future deadlines with default accent color, unless conditions described below apply.
 * Deadlines highlighted in red are *approaching soon*. 
   * When entering the deadline to the course, you can specify how many days before the deadline becomes so important that it should be highlighed.
-* Deadlines in orange and with the warning symbol are directly impacting the course success.
-  * If the deadline is missed, either the course is failed or missing it impacts the grade (to worse, obviously).
+* Deadlines in orange and with the warning symbol are directly impacting the course success, if they are missed.
+  * If the deadline is missed, either the course is failed or missing it impacts the grade (to worse, obviously). See below for additional discussion on this.
 * The symbol for the deadline is something you can specify yourself, using Apple's [SF symbols](https://developer.apple.com/sf-symbols/). See details below.
 * You can switch between the courses you have entered, using the drop down list.
 
@@ -24,7 +25,7 @@ The app saves the course deadlines to the user's Document folder, in `Documents/
 
 Additional benefit of using JSON as the file format is that anyone can implement a similar app with any other language to whichever platform they prefer, supporting this file format.
 
-## Adding or editing a course
+## Editing a course and deadlines
 
 Press the button on the screen, and enter the course name and the starting date. The starting date is used to calculate how many percent of the course has been passed, relative to the last deadline of the course.
 
@@ -39,11 +40,13 @@ Press it and you may then edit the details of the deadline:
 * Enter the symbol you wish to use for the deadline. Download the [SF symbols](https://developer.apple.com/sf-symbols/) app to view suitable symbols you would like to use with the deadline.
 * give a goal of the deadline, 
 * the date and time for it,
-* specify how many days before the deadline it becomes highlighted in red, and
-* specify if the deadline is a deal breaker; that is if the student misses it, there are consequences.
+* specify how many days before the deadline it becomes highlighted ("hot"), and
+* specify if the deadline is a deal breaker; that is if the student misses it, there are consequences. If you decide *all* deadlines are deal breakers, then just either ignore this setting or check this box for all deadlines in the course.
 
 Then press the Save button, and you will have a new deadline for the course.
 
+If you wish to delete a deadline, select the row, swipe left and press the delete button:
 
+![delete deadline](delete-row-screenshot.png)
 
-
+ 
