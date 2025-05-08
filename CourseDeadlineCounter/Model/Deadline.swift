@@ -46,13 +46,13 @@ class Deadline: Codable {
 	}
 	
 	func percentageLeft(from startDate: Date) -> Int {
-		return max(min(100 - percentageReached(from: startDate), 0), 100)
+		return min(max(100 - percentageReached(from: startDate), 0), 100)
 	}
 	
 	func percentageReached(from startDate: Date) -> Int {
 		let wholeSpan = date.distance(to: startDate)
 		let currentSpan = Date.now.distance(to: startDate)
-		return max(min(Int((currentSpan / wholeSpan) * 100), 0), 100)
+		return min(max(Int((currentSpan / wholeSpan) * 100), 0), 100)
 	}
 }
 

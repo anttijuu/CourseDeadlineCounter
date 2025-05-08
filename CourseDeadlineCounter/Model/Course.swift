@@ -37,11 +37,11 @@ class Course: Codable {
 	}
 	
 	var courseAgeInDays: Int {
-		min(Int(Date.now.timeIntervalSince(startDate)) / 86400, 0)
+		Int(Date.now.timeIntervalSince(startDate) / 86400)
 	}
 	
 	func percentageLeft() -> Int {
-		return max(min(100 - percentageReached(), 0), 100)
+		return min(max(100 - percentageReached(), 0), 100)
 	}
 	
 	func percentageReached() -> Int {
@@ -69,16 +69,7 @@ class Course: Codable {
 			try remove(at: index)
 		}
 	}
-	
-//	func update(_ deadline: Deadline) throws {
-//		// Currently deadlines are classes, so modify is not necessary, add if not in array.
-//		if deadlines.firstIndex(where: { $0.id == deadline.id }) == nil {
-//			deadlines.append(deadline)
-//			deadlines.sort()
-//		}
-//		try store(to: Deadlines.storagePath)
-//	}
-	
+		
 	func store(to path: URL) throws {
 		deadlines.sort()
 		let fileManager = FileManager.default
