@@ -39,11 +39,11 @@ struct CourseDetailsView: View {
 	let course: Course
 	
 	var body: some View {
-		VStack(alignment: .leading) {
-			HStack(alignment: .top) {
-				Image(systemName: "book.and.wrench")
-					.font(.largeTitle)
-					.foregroundColor(.accentColor)
+		HStack {
+			Image(systemName: "book.and.wrench")
+				.font(.largeTitle)
+				.foregroundColor(.accentColor)
+			HStack(alignment: .bottom) {
 				VStack(alignment: .leading) {
 					Text(course.name)
 						.font(.title2)
@@ -80,7 +80,7 @@ struct ContentView: View {
 	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
-
+	
 	var body: some View {
 		NavigationSplitView(sidebar: {
 			List(deadlines.courses, selection: $selectedCourse) { course in
