@@ -1,4 +1,5 @@
 xcuserdata/
 scuserdatad/
 .DS_Store
-
+CourseDeadlineCounter\ Localizations/
+BuildConfig/LocalEnvironment.xcconfig

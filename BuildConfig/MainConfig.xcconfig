@@ -1,0 +1,21 @@
+//
+//  MainConfig.xcconfig
+//  CourseDeadlineCounter
+//
+//  Created by Antti Juustila on 2025-05-09
+//  Copyright © 2025 Antti Juustila. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// MARK: CODE SIGNING
+//
+// Team ID (from Apple Developer Membership page)
+DEVELOPMENT_TEAM =
+PRODUCT_BUNDLE_IDENTIFIER = com.mydomain.myapps.AppName
+CODE_SIGN_STYLE = Manual
+
+// MARK: LOCAL SETTINGS
+// Override with local settings
+#include? "LocalEnvironment.xcconfig"

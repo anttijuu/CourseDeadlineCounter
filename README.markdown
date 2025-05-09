@@ -6,7 +6,7 @@ Course Deadlines is a tool that instructors can use to make course deadlines mor
 
 ℹ️ The app is localized to English and Finnish, the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
 
-## What For?
+## And What For?
 
 Course deadlines are usually announced at the introductory lecture of the course. Even though the deadlines are also in the materials and/or the course website, it sometimes may happen that when the deadline comes, there are some who are surprised that it "came so soon". The assignments are not even nearly ready, which causes issues in passing the courses and stressful situations.
 
@@ -75,18 +75,36 @@ To delete a deadline, select the line and swipe to the left (confirmation will b
 
 ## Planned Features
 
-- [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file. The course list can then be updated.
-- [ ] Alerting from approaching deadlines.
+- [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file with a text editor. The course list can then be updated.
+- [ ] Alert about approaching deadlines.
 - [ ] Share button to send the course.json file to someone.
 - [ ] Selecting the deadline symbol from a list of (limited) options.
 
 
-
 ## Contributing
 
-If you find any bugs, please report them to me, either by using the GitHub Issues or send me a message. You may also fork the repo, create a branch, fix the bug, create and issue here and then submit a pull request from your branch fixing the issue.
+If you find any bugs, please report them to me, either by using the GitHub Issues or send me a message, somehow. You may also fork the repo, create a branch, fix the bug, create and issue here and then submit a pull request in GitHub from your branch, fixing the issue (or adding a feature).
 
 ## License
 
-* (c) Antti Juustila, 2024-2025
-* MIT License 
+MIT License 
+
+Copyright (c) 2024-2025 Antti Juustila
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -10,14 +10,14 @@ import AppKit
 import OSLog
 
 // TODO: Observe document folder for new files, reload list if changes in files.
-// TODO: New screenshots
-// TODO: Consider GUI choices, should change to hierarchical lists like GitLogVisualized with toolbar buttons?
+// TODO: Make sure entering new course name does not clash with existing course name.
 
 @Observable
 class Deadlines {
 	
-	static private(set) var storagePath: URL = URL.documentsDirectory
-	private static var counter = 0
+	static let appDocumentDirectory = "CourseDeadlines"
+	
+	private var counter = 0
 
 	var courses: [Course] = []
 
@@ -29,21 +29,21 @@ class Deadlines {
 	}
 	
 	func readCourseList() throws {
-		Self.storagePath = URL.documentsDirectory.appending(component: "CourseDeadlines", directoryHint: .isDirectory)
+		let storagePath = URL.documentsDirectory.appending(component: Deadlines.appDocumentDirectory, directoryHint: .isDirectory)
 		do {
 			var courseNames = [String]()
 			log.debug("Starting to read course list")
-			let gotAccess = Self.storagePath.startAccessingSecurityScopedResource()
+			let gotAccess = storagePath.startAccessingSecurityScopedResource()
 			if !gotAccess {
 				log.info("No access to file system")
 				return
 			}
 			defer {
-				Self.storagePath.stopAccessingSecurityScopedResource()
+				storagePath.stopAccessingSecurityScopedResource()
 			}
 			log.debug("Creating file directory if needed")
-			try FileManager.default.createDirectory(at: Self.storagePath, withIntermediateDirectories: true)
-			let thePath = Self.storagePath.path()
+			try FileManager.default.createDirectory(at: storagePath, withIntermediateDirectories: true)
+			let thePath = storagePath.path()
 			if let enumerator = FileManager.default.enumerator(atPath: thePath) {
 				while let file = enumerator.nextObject() as? String {
 					if file.hasSuffix(".json") {
@@ -62,9 +62,9 @@ class Deadlines {
 	}
 		
 	func newCourse() -> Course {
-		Deadlines.counter += 1
+		counter += 1
 		return Course(
-			name: NSLocalizedString("<New Course \(Deadlines.counter)>", comment: "String shown when a new course is created"),
+			name: NSLocalizedString("<New Course \(counter)>", comment: "String shown when a new course is created"),
 			startDate: Date.now
 		)
 	}
@@ -81,7 +81,8 @@ class Deadlines {
 	}
 		
 	private func deleteFile(for course: String) throws {
-		let coursePath = Self.storagePath.appending(path: course + ".json")
+		let storagePath = URL.documentsDirectory.appending(component: Deadlines.appDocumentDirectory, directoryHint: .isDirectory)
+		let coursePath = storagePath.appending(path: course + ".json")
 		var removeError: Error?
 		if FileManager.default.fileExists(atPath: coursePath.path(percentEncoded: false)) {
 			log.debug("Moving the \(course) to Trash")
@@ -97,7 +98,8 @@ class Deadlines {
 	}
 	
 	func loadDeadlines(for courseName: String) throws {
-		let course = try Course.restore(from: Self.storagePath, for: courseName)
+		let storagePath = URL.documentsDirectory.appending(component: Deadlines.appDocumentDirectory, directoryHint: .isDirectory)
+		let course = try Course.restore(from: storagePath, for: courseName)
 		courses.append(course)
 	}
 	
@@ -114,7 +116,7 @@ class Deadlines {
 			courses.append(course)
 			courses.sort()
 		}
-		try course.store(to: Self.storagePath)
+		try course.store()
 	}
 
 }

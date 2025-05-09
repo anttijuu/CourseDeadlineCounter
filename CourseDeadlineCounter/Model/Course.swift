@@ -56,12 +56,12 @@ class Course: Codable {
 	func add(_ deadline: Deadline) throws {
 		deadlines.append(deadline)
 		deadlines.sort()
-		try store(to: Deadlines.storagePath)
+		try store()
 	}
 	
 	func remove(at index: Int) throws {
 		deadlines.remove(at: index)
-		try store(to: Deadlines.storagePath)
+		try store()
 	}
 	
 	func remove(_ deadline: Deadline) throws {
@@ -70,14 +70,14 @@ class Course: Codable {
 		}
 	}
 		
-	func store(to path: URL) throws {
+	func store() throws {
+		let storagePath = URL.documentsDirectory.appending(component: Deadlines.appDocumentDirectory, directoryHint: .isDirectory)
 		deadlines.sort()
 		let fileManager = FileManager.default
 		let encoder = JSONEncoder()
 		encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
 		let data = try encoder.encode(self)
-		let string = String(data: data, encoding: .utf8)
-		let filePath = path.appending(path: name + ".json").path(percentEncoded: false)
+		let filePath = storagePath.appending(path: name + ".json").path(percentEncoded: false)
 		print("Storing file \(filePath)")
 		if !fileManager.createFile(atPath: filePath, contents: data) {
 			throw DeadlineErrors.fileSaveError

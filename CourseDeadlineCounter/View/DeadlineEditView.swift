@@ -82,7 +82,7 @@ struct DeadlineEditView: View {
 		deadline.goal = editDeadlineGoal
 		deadline.becomesHotDaysBefore = editDaysComesHot
 		deadline.isDealBreaker = editIsDealBreaker
-		try course.store(to: Deadlines.storagePath)
+		try course.store()
 		dismiss()
 	}
 }
