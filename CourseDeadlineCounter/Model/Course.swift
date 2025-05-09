@@ -77,11 +77,9 @@ class Course: Codable {
 		encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
 		let data = try encoder.encode(self)
 		let string = String(data: data, encoding: .utf8)
-		print(string!)
 		let filePath = path.appending(path: name + ".json").path(percentEncoded: false)
 		print("Storing file \(filePath)")
 		if !fileManager.createFile(atPath: filePath, contents: data) {
-			print("createFile returned false :(")
 			throw DeadlineErrors.fileSaveError
 		}
 	}

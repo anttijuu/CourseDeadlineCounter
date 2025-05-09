@@ -4,7 +4,7 @@
 
 Course Deadlines is a tool that instructors can use to make course deadlines more visible to students, keeping everybody aware of the deadlines, throughout the course implementation. Students may also use the same app, and add their own deadlines to the app also, for all the courses they are taking.
 
-⚠️ The app is localized to English and Finnish, the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
+ℹ️ The app is localized to English and Finnish, the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
 
 ## What For?
 
@@ -71,6 +71,14 @@ Then press the Save button, and you will have a new deadline for the course.
 To delete a deadline, select the line and swipe to the left (confirmation will be asked before deletion):
 
 ![Edit course swiping](images/delete-deadline-swipe.png)
+
+
+## Planned Features
+
+- [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file. The course list can then be updated.
+- [ ] Alerting from approaching deadlines.
+- [ ] Share button to send the course.json file to someone.
+- [ ] Selecting the deadline symbol from a list of (limited) options.
 
 
 

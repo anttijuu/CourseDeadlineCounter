@@ -24,7 +24,7 @@ struct SingleDeadlineListRow: View {
 				HStack {
 					if deadline.isDealBreaker {
 						Image(systemName: "exclamationmark.triangle.fill")
-							.foregroundStyle(.orange)
+							.foregroundStyle(deadlineColor)
 					}
 					Text(deadline.date, style: .relative)
 						.padding(.trailing, 0)
@@ -33,11 +33,9 @@ struct SingleDeadlineListRow: View {
 					if !deadline.isReached {
 						Text("\(deadline.percentageLeft(from: course.startDate).formatted(.percent)) calendar time left")
 							.bold()
-							.foregroundStyle(deadlineColor)
 					}
 				}
 				.font(.title3)
-				.foregroundStyle(deadlineColor)
 				VStack(alignment: .leading) {
 					Text(deadline.goal)
 						.font(.title3)

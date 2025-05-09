@@ -42,6 +42,11 @@
         <target state="translated">%@ kalenteriajasta jäljellä</target>
         <note/>
       </trans-unit>
+      <trans-unit id="%@ left to go" xml:space="preserve">
+        <source>%@ left to go</source>
+        <target state="translated">%@ jäljellä</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="%lld days before deadline" xml:space="preserve">
         <source>%lld days before deadline</source>
         <target state="translated">%lld päivää ennen deadlinea</target>
@@ -51,6 +56,21 @@
         <source>A goal to reach in the course</source>
         <target state="translated">Kurssilla saavutettavan deadlinen kuvaus</target>
         <note>String to put to a new deadline for user to edit</note>
+      </trans-unit>
+      <trans-unit id="Add new course" xml:space="preserve">
+        <source>Add new course</source>
+        <target state="translated">Lisää uusi kurssi</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Add new deadline" xml:space="preserve">
+        <source>Add new deadline</source>
+        <target state="translated">Lisää uusi deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target state="translated">Peruuta</target>
+        <note/>
       </trans-unit>
       <trans-unit id="Confirm Delete" xml:space="preserve">
         <source>Confirm Delete</source>
@@ -70,6 +90,11 @@
       <trans-unit id="Could not save deadline" xml:space="preserve">
         <source>Could not save deadline</source>
         <target state="translated">Deadlinea ei voitu tallentaa</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course is now %lld days old" xml:space="preserve">
+        <source>Course is now %lld days old</source>
+        <target state="translated">Kurssi on nyt %lld päivää vanha</target>
         <note/>
       </trans-unit>
       <trans-unit id="Course name:" xml:space="preserve">
@@ -107,6 +132,11 @@
         <target state="translated">Poista</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Delete Course" xml:space="preserve">
+        <source>Delete Course</source>
+        <target state="translated">Poista kurssi</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="Delete Deadline" xml:space="preserve">
         <source>Delete Deadline</source>
         <target state="translated">Poista deadlne</target>
@@ -139,7 +169,7 @@
       </trans-unit>
       <trans-unit id="Edit Deadline" xml:space="preserve">
         <source>Edit Deadline</source>
-        <target state="translated">Muokkaa Deadlinea</target>
+        <target state="translated">Muokkaa deadlinea</target>
         <note/>
       </trans-unit>
       <trans-unit id="Edit deadline" xml:space="preserve">
@@ -162,6 +192,11 @@
         <target state="translated">Tiedostoa ei voi lukea koska sitä ei ole olemassa.</target>
         <note>When reading course deadline file</note>
       </trans-unit>
+      <trans-unit id="Has %lld deadlines (%lld completed)" xml:space="preserve">
+        <source>Has %1$lld deadlines (%2$lld completed)</source>
+        <target state="translated">%1$lld deadlinea (%2$lld ohitettu)</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="If deadline is not met, course is considered failed or grade is lowered" xml:space="preserve">
         <source>If deadline is not met, course is considered failed or grade is lowered</source>
         <target state="translated">Jos deadline missaa, kurssisuoritus keskeytyy tai arvosana alenee</target>
@@ -170,6 +205,11 @@
       <trans-unit id="Is deal breaker?" xml:space="preserve">
         <source>Is deal breaker?</source>
         <target state="translated">Vaikuttaa arvosteluun?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Move the the course to Trash?" xml:space="preserve">
+        <source>Move the the course to Trash?</source>
+        <target state="translated">Siirrä kurssi Roskakoriin?</target>
         <note/>
       </trans-unit>
       <trans-unit id="Move this course to Trash?" xml:space="preserve">
@@ -202,6 +242,11 @@
         <target state="translated">Katso symboleita SF Symbols -apista</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Select course from the list or create a new course" xml:space="preserve">
+        <source>Select course from the list or create a new course</source>
+        <target state="translated">Valitse kurssi listalta tai luo uusi kurssi</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="Set deadline:" xml:space="preserve">
         <source>Set deadline:</source>
         <target state="translated">Aseta deadline:</target>
@@ -212,6 +257,16 @@
         <target state="translated">Aloituspäivä:</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Starts at %@" xml:space="preserve">
+        <source>Starts at %@</source>
+        <target state="translated">Alkaa %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Starts in %lld days" xml:space="preserve">
+        <source>Starts in %lld days</source>
+        <target state="translated">Alkaa %lld päivän kuluttua</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="ago" xml:space="preserve">
         <source>ago</source>
         <target state="translated">sitten</target>
@@ -220,6 +275,11 @@
       <trans-unit id="left" xml:space="preserve">
         <source>left</source>
         <target state="translated">kuluttua</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="until deadline" xml:space="preserve">
+        <source>until deadline</source>
+        <target state="translated">deadlineen</target>
         <note/>
       </trans-unit>
     </body>

@@ -42,6 +42,11 @@
         <target state="new">%@ calendar time left</target>
         <note/>
       </trans-unit>
+      <trans-unit id="%@ left to go" xml:space="preserve">
+        <source>%@ left to go</source>
+        <target state="new">%@ left to go</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="%lld days before deadline" xml:space="preserve">
         <source>%lld days before deadline</source>
         <target state="new">%lld days before deadline</target>
@@ -51,6 +56,21 @@
         <source>A goal to reach in the course</source>
         <target state="new">A goal to reach in the course</target>
         <note>String to put to a new deadline for user to edit</note>
+      </trans-unit>
+      <trans-unit id="Add new course" xml:space="preserve">
+        <source>Add new course</source>
+        <target state="new">Add new course</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Add new deadline" xml:space="preserve">
+        <source>Add new deadline</source>
+        <target state="new">Add new deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target state="new">Cancel</target>
+        <note/>
       </trans-unit>
       <trans-unit id="Confirm Delete" xml:space="preserve">
         <source>Confirm Delete</source>
@@ -70,6 +90,11 @@
       <trans-unit id="Could not save deadline" xml:space="preserve">
         <source>Could not save deadline</source>
         <target state="new">Could not save deadline</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Course is now %lld days old" xml:space="preserve">
+        <source>Course is now %lld days old</source>
+        <target state="new">Course is now %lld days old</target>
         <note/>
       </trans-unit>
       <trans-unit id="Course name:" xml:space="preserve">
@@ -105,6 +130,11 @@
       <trans-unit id="Delete" xml:space="preserve">
         <source>Delete</source>
         <target state="new">Delete</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Delete Course" xml:space="preserve">
+        <source>Delete Course</source>
+        <target state="new">Delete Course</target>
         <note/>
       </trans-unit>
       <trans-unit id="Delete Deadline" xml:space="preserve">
@@ -162,6 +192,11 @@
         <target state="new">File does not exist, cannot read it.</target>
         <note>When reading course deadline file</note>
       </trans-unit>
+      <trans-unit id="Has %lld deadlines (%lld completed)" xml:space="preserve">
+        <source>Has %1$lld deadlines (%2$lld completed)</source>
+        <target state="new">Has %1$lld deadlines (%2$lld completed)</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="If deadline is not met, course is considered failed or grade is lowered" xml:space="preserve">
         <source>If deadline is not met, course is considered failed or grade is lowered</source>
         <target state="new">If deadline is not met, course is considered failed or grade is lowered</target>
@@ -170,6 +205,11 @@
       <trans-unit id="Is deal breaker?" xml:space="preserve">
         <source>Is deal breaker?</source>
         <target state="new">Is deal breaker?</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Move the the course to Trash?" xml:space="preserve">
+        <source>Move the the course to Trash?</source>
+        <target state="new">Move the the course to Trash?</target>
         <note/>
       </trans-unit>
       <trans-unit id="Move this course to Trash?" xml:space="preserve">
@@ -202,6 +242,11 @@
         <target state="new">See SF Symbols app for available symbols</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Select course from the list or create a new course" xml:space="preserve">
+        <source>Select course from the list or create a new course</source>
+        <target state="new">Select course from the list or create a new course</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="Set deadline:" xml:space="preserve">
         <source>Set deadline:</source>
         <target state="new">Set deadline:</target>
@@ -212,6 +257,16 @@
         <target state="new">Start date:</target>
         <note/>
       </trans-unit>
+      <trans-unit id="Starts at %@" xml:space="preserve">
+        <source>Starts at %@</source>
+        <target state="new">Starts at %@</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Starts in %lld days" xml:space="preserve">
+        <source>Starts in %lld days</source>
+        <target state="new">Starts in %lld days</target>
+        <note/>
+      </trans-unit>
       <trans-unit id="ago" xml:space="preserve">
         <source>ago</source>
         <target state="new">ago</target>
@@ -220,6 +275,11 @@
       <trans-unit id="left" xml:space="preserve">
         <source>left</source>
         <target state="new">left</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="until deadline" xml:space="preserve">
+        <source>until deadline</source>
+        <target state="new">until deadline</target>
         <note/>
       </trans-unit>
     </body>

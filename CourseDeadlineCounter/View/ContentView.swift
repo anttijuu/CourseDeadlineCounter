@@ -7,29 +7,31 @@
 
 import SwiftUI
 
-struct CourseEditButton: View {
+struct EditButton: View {
+	let label: String
 	let action: () -> Void
 	
 	var body: some View {
 		Button {
 			action()
 		} label: {
-			Label("Edit Course", systemImage: "square.and.pencil")
+			Label(label, systemImage: "square.and.pencil")
 		}
-		.help("Edit Course")
+		.help(label)
 	}
 }
 
-struct CourseDeleteButton: View {
+struct DeleteButton: View {
+	let label: String
 	let action: () -> Void
 	
 	var body: some View {
 		Button(role: .destructive) {
 			action()
 		} label: {
-			Label("Delete Course", systemImage: "trash")
+			Label(label, systemImage: "trash")
 		}
-		.help("Delete Course")
+		.help(label)
 	}
 }
 
@@ -85,35 +87,19 @@ struct ContentView: View {
 				Text(course.name)
 					.font(.title3)
 					.contextMenu {
-						CourseEditButton(action:  { showCourseEditView.toggle() } )
+						EditButton(label: "Edit Course", action: { showCourseEditView.toggle() } )
 							.disabled(selectedCourse == nil)
-						CourseDeleteButton(action: {deleteCourseAlert.toggle() } )
+						DeleteButton(label: "Delete Course", action: {deleteCourseAlert.toggle() } )
 							.disabled(selectedCourse == nil)
 					}
 					.swipeActions(edge: .leading) {
-						CourseEditButton(action:  { showCourseEditView.toggle() } )
+						EditButton(label: "Edit Course", action: { showCourseEditView.toggle() } )
 							.disabled(selectedCourse == nil)
 							.help("Edit Course")
 					}
 					.swipeActions(edge: .trailing) {
-						CourseDeleteButton(action: {deleteCourseAlert.toggle() } )
+						DeleteButton(label: "Delete Course", action: {deleteCourseAlert.toggle() } )
 							.disabled(selectedCourse == nil)
-					}
-					.alert("Confirm Delete", isPresented: $deleteCourseAlert) {
-						Button(role: .destructive) {
-							do {
-								if let course = deadlines.course(id: selectedCourse) {
-									try deadlines.delete(course)
-								}
-							} catch {
-								errorMessage = error.localizedDescription
-								isError = true
-							}
-						} label: {
-							Text("Delete course")
-						}
-					} message: {
-						Text("Move this course to Trash?")
 					}
 			}
 			.toolbar {
@@ -132,21 +118,15 @@ struct ContentView: View {
 					CourseDetailsView(course: course)
 					List(course.deadlines, id: \.self, selection: $selectedDeadline) { deadline in
 						SingleDeadlineListRow(course: course, deadline: deadline)
+							.contextMenu {
+								EditButton(label: "Edit Deadline", action: { showDeadlineEditView.toggle() } )
+								DeleteButton(label: "Delete Deadline", action: { deleteDeadlineAlert.toggle() } )
+							}
 							.swipeActions(edge: .leading) {
-								Button {
-									showDeadlineEditView.toggle()
-								} label: {
-									Label("Edit", systemImage: "square.and.pencil")
-								}
-								.help("Edit Deadline")
+								EditButton(label: "Edit Deadline", action: { showDeadlineEditView.toggle() } )
 							}
 							.swipeActions(edge: .trailing) {
-								Button(role: .destructive) {
-									deleteDeadlineAlert.toggle()
-								} label: {
-									Label("Delete", systemImage: "trash")
-								}
-								.help("Delete Deadline")
+								DeleteButton(label: "Delete Deadline", action: { deleteDeadlineAlert.toggle() } )
 							}
 					}
 					.padding()
@@ -161,11 +141,11 @@ struct ContentView: View {
 							 isPresented: $deleteDeadlineAlert)
 					{
 						Button(role: .destructive) {
-							if selectedDeadline != nil {
-								delete(selectedDeadline!, from: course)
+							if let selectedDeadline {
+								delete(selectedDeadline, from: course)
 							}
 						} label: {
-							Text("Delete deadline")
+							Label("Delete Deadline", systemImage: "trash")
 						}
 					} message: {
 						Text("Delete this deadline? This cannot be undone.")
@@ -217,8 +197,8 @@ struct ContentView: View {
 				isError = true
 			}
 		}
-		.confirmationDialog("Do you really want to delete the course with all deadlines?", isPresented: $deleteCourseAlert) {
-			Button("Delete", role: .destructive)	 {
+		.confirmationDialog("Move the the course to Trash?", isPresented: $deleteCourseAlert) {
+			Button("Delete Course", role: .destructive)	 {
 				if let course = deadlines.course(id: selectedCourse) {
 					do {
 						try deadlines.delete(course)
@@ -229,7 +209,7 @@ struct ContentView: View {
 				}
 			}
 			Button("Cancel", role: .cancel) {
-				deleteCourseAlert = false
+				
 			}
 		}
 		

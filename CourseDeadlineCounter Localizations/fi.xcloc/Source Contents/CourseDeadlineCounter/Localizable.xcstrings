@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     " Course is now %lld days old, %@ left to go." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -12,12 +13,15 @@
       }
     },
     " Starts in %lld days" : {
-
+      "extractionState" : "stale"
     },
     "%@" : {
-
+      "extractionState" : "stale"
     },
     "%@ calendar time left" : {
+
+    },
+    "%@ left to go" : {
 
     },
     "%lld days before deadline" : {
@@ -26,7 +30,16 @@
     "A goal to reach in the course" : {
       "comment" : "String to put to a new deadline for user to edit"
     },
+    "Add new course" : {
+
+    },
+    "Add new deadline" : {
+
+    },
     "ago" : {
+
+    },
+    "Cancel" : {
 
     },
     "Confirm Delete" : {
@@ -41,11 +54,14 @@
     "Could not save deadline" : {
 
     },
+    "Course is now %lld days old" : {
+
+    },
     "Course name:" : {
 
     },
     "Course start date is %@" : {
-
+      "extractionState" : "stale"
     },
     "Date issue: %@" : {
 
@@ -57,16 +73,19 @@
 
     },
     "Deadlines for course" : {
-
+      "extractionState" : "stale"
     },
     "Delete" : {
-
+      "extractionState" : "stale"
     },
     "Delete course" : {
+      "extractionState" : "stale"
+    },
+    "Delete Course" : {
 
     },
     "Delete deadline" : {
-
+      "extractionState" : "stale"
     },
     "Delete Deadline" : {
 
@@ -75,16 +94,16 @@
 
     },
     "Edit" : {
-
+      "extractionState" : "stale"
     },
     "Edit Course" : {
 
     },
     "Edit deadline" : {
-      "extractionState" : "stale"
+
     },
     "Edit Deadline" : {
-
+      "extractionState" : "stale"
     },
     "Error" : {
 
@@ -95,6 +114,16 @@
     "File does not exist, cannot read it." : {
       "comment" : "When reading course deadline file"
     },
+    "Has %lld deadlines (%lld completed)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Has %1$lld deadlines (%2$lld completed)"
+          }
+        }
+      }
+    },
     "If deadline is not met, course is considered failed or grade is lowered" : {
 
     },
@@ -102,21 +131,27 @@
 
     },
     "left" : {
+      "extractionState" : "stale"
+    },
+    "Move the the course to Trash?" : {
 
     },
     "Move this course to Trash?" : {
-
+      "extractionState" : "stale"
     },
     "New Course" : {
       "comment" : "User is creating a new course"
     },
     "New Deadline" : {
-
+      "extractionState" : "stale"
     },
     "Save" : {
 
     },
     "See SF Symbols app for available symbols" : {
+
+    },
+    "Select course from the list or create a new course" : {
 
     },
     "Set deadline:" : {
@@ -126,6 +161,15 @@
 
     },
     "Start date:" : {
+
+    },
+    "Starts at %@" : {
+
+    },
+    "Starts in %lld days" : {
+
+    },
+    "until deadline" : {
 
     }
   },

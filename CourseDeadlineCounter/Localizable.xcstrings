@@ -1,45 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    " Course is now %lld days old, %@ left to go." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : " Course is now %1$lld days old, %2$@ left to go."
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " Kurssi on nyt %1$lld päivää vanha, %2$@ jäljellä"
-          }
-        }
-      }
-    },
-    " Starts in %lld days" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " Aloitus %lld päivän kuluttua"
-          }
-        }
-      }
-    },
-    "%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
     "%@ calendar time left" : {
       "localizations" : {
         "fi" : {
@@ -51,7 +12,14 @@
       }
     },
     "%@ left to go" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ jäljellä"
+          }
+        }
+      }
     },
     "%lld days before deadline" : {
       "localizations" : {
@@ -75,10 +43,24 @@
       }
     },
     "Add new course" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää uusi kurssi"
+          }
+        }
+      }
     },
     "Add new deadline" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää uusi deadline"
+          }
+        }
+      }
     },
     "ago" : {
       "localizations" : {
@@ -91,7 +73,14 @@
       }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peruuta"
+          }
+        }
+      }
     },
     "Confirm Delete" : {
       "localizations" : {
@@ -134,7 +123,14 @@
       }
     },
     "Course is now %lld days old" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssi on nyt %lld päivää vanha"
+          }
+        }
+      }
     },
     "Course name:" : {
       "localizations" : {
@@ -142,17 +138,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kurssin nimi:"
-          }
-        }
-      }
-    },
-    "Course start date is %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurssin aloituspäivä on %@"
           }
         }
       }
@@ -187,46 +172,12 @@
         }
       }
     },
-    "Deadlines for course" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kurssin deadlinet"
-          }
-        }
-      }
-    },
-    "Delete" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poista"
-          }
-        }
-      }
-    },
-    "Delete course" : {
+    "Delete Course" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poista kurssi"
-          }
-        }
-      }
-    },
-    "Delete Course" : {
-
-    },
-    "Delete deadline" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Poista deadline"
           }
         }
       }
@@ -251,19 +202,6 @@
         }
       }
     },
-    "Do you really want to delete the course with all deadlines?" : {
-
-    },
-    "Edit" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Muokkaa"
-          }
-        }
-      }
-    },
     "Edit Course" : {
       "localizations" : {
         "fi" : {
@@ -275,14 +213,11 @@
       }
     },
     "Edit deadline" : {
-
-    },
-    "Edit Deadline" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Muokkaa Deadlinea"
+            "value" : "Muokkaa deadlinea"
           }
         }
       }
@@ -326,6 +261,12 @@
             "state" : "new",
             "value" : "Has %1$lld deadlines (%2$lld completed)"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld deadlinea (%2$lld ohitettu)"
+          }
         }
       }
     },
@@ -349,18 +290,7 @@
         }
       }
     },
-    "left" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kuluttua"
-          }
-        }
-      }
-    },
-    "Move this course to Trash?" : {
+    "Move the the course to Trash?" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -377,17 +307,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uusi kurssi"
-          }
-        }
-      }
-    },
-    "New Deadline" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uusi deadline"
           }
         }
       }
@@ -413,7 +332,14 @@
       }
     },
     "Select course from the list or create a new course" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse kurssi listalta tai luo uusi kurssi"
+          }
+        }
+      }
     },
     "Set deadline:" : {
       "localizations" : {
@@ -446,13 +372,34 @@
       }
     },
     "Starts at %@" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alkaa %@"
+          }
+        }
+      }
     },
     "Starts in %lld days" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alkaa %lld päivän kuluttua"
+          }
+        }
+      }
     },
     "until deadline" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "deadlineen"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
