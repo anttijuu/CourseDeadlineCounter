@@ -75,10 +75,10 @@ To delete a deadline, select the line and swipe to the left (confirmation will b
 
 ## Planned Features
 
-- [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file with a text editor. The course list can then be updated.
+- [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file with a text editor. The course list can then be updated automatically, without the need to restart the app. Alternatively, add a refresh button but that is kind of blah.
 - [ ] Alert about approaching deadlines.
 - [ ] Share button to send the course.json file to someone.
-- [ ] Selecting the deadline symbol from a list of (limited) options.
+- [ ] Selecting the deadline symbol from a list of (limited) options (hammer, notepad, seal, person, person.2, graduationcap.fill,...).
 
 
 ## Contributing
