@@ -10,53 +10,68 @@ Course Deadlines is a tool that instructors can use to make course deadlines mor
 
 Course deadlines are usually announced at the introductory lecture of the course. Even though the deadlines are also in the materials and/or the course website, it sometimes may happen that when the deadline comes, there are some who are surprised that it "came so soon". The assignments are not even nearly ready, which causes issues in passing the courses and stressful situations.
 
-This tool was built for teachers to show all the relevant course deadlines in one list. For example, in opening the weekly lecture, the teacher can share the app screen and remind the students about the upcoming deadlines as well as other later deadlines.
+This tool was built for teachers to show all the relevant course deadlines in one list. For example, when opening the weekly lecture, the teacher can share the app screen and remind the students about the upcoming deadlines as well as other later deadlines.
 
 > Note that the app (currently) does not notify or alert about upcoming deadlines, just displays them.
 
+
 ## Functionality and User Interface
 
-Some notes about the deadlines visible in the example below:
+Some notes about the app with deadline examples seen below:
 
-![App screenshot](screenshot.png)
+![App screenshot](images/mainview.png)
 
-* Deadlines are sorted by the date, last one at the end.
-* You can switch between the courses you have added, using the drop down list.
+* On the left, there is a list of courses user has hadded.
+  * You can add new courses using the button above the course list in the toolbar.
+* You can switch between the courses you have added, using the list.
+* In the course details view on the right, deadlines for the selected course are sorted by the date, last one at the end.
 * Past deadlines are shown in gray, future deadlines with default accent color, unless conditions described below apply.
-* Deadlines highlighted in red are *approaching soon*. 
-  * When entering the deadline to the course, you can specify how many days before the deadline becomes so important that it should be highlighed.
-* Deadlines in orange and with the warning symbol are directly impacting the course success, when they are missed.
-  * If the deadline is missed, either the course is failed or missing it impacts the grade (to worse, obviously). See below for additional discussion on this.
+  * Deadlines highlighted in red are *approaching soon*. 
+  * Deadlines in orange and with the warning symbol are directly impacting the course success, when they are missed.
+    * If the deadline is missed, either the course is failed or missing it impacts the grade (to worse, obviously). See below for additional discussion on this.
 * The symbol for the deadline is something you can specify yourself, using Apple's [SF symbols](https://developer.apple.com/sf-symbols/). See details below.
-* Use the buttons on top to create a new course, remove the currently selected course, edit the course or add a new deadline to the course.
+* Use the toolbar buttons on top to create a new course or add a new deadline to the course.
+* To edit or delete a course or a deadline, select the row and swipe right (to edit) or left (to delete) an item.
+  * If your mouse does not support swiping, use the right button and a context menu will appear.
+  * When deleting, confirmation is displayed first.
 
 The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`, each course stored in separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again.
 
 Additional benefit of using JSON as the file format is that anyone can implement a similar app with any other language to whichever platform they prefer, supporting this file format.
 
+> Note that the current version is not yet aware of new files added to the folder when the app is running. New files (courses) are listed only after application restart. 
+ 
+
 ## Editing a course and deadlines
 
-Press the button on the screen, and enter the course name and the starting date. The starting date is used to calculate how many percent of the course has been passed, relative to the last deadline of the course.
+To add a new course, press the toolbar button above the course list and enter the course name and the starting date. The starting date is used to calculate how many percent of the course has been passed, relative to the last deadline of the course. After saving, you can edit the course details by swiping the course row to right:
 
-When you have added a new course, you may add new deadlines and/or edit them. Press the New deadline button, select the row in the list, and swipe right. You will see the edit button:
+![Edit course swiping](images/edit-course-swipe.png)
 
-![edit row](edit-row-screenshot.png)
+To move a course to the Trash, swipe to the left (confirmation will be asked before deletion):
 
-Press it and you may then edit the details of the deadline:
+![Edit course swiping](images/delete-course-swipe.png)
 
-![edit deadline](edit-deadline-screenshot.png)
+When you have added a new course, you may add new deadlines and/or edit them. Press the new deadline button (above the course details in the toolbar), and a new deadline is added to the list of deadlines. Select the row in the list, and swipe right. You will see the edit deadline button:
+
+![edit row](images/edit-deadline-swipe.png)
+
+Press the edit button and you may then edit the details of the deadline:
+
+![edit row](images/edit-deadline.png)
 
 * Enter the symbol you wish to use for the deadline. Download the [SF symbols](https://developer.apple.com/sf-symbols/) app to view suitable symbols you would like to use with the deadline.
-* give a goal of the deadline, 
-* the date and time for it,
-* specify how many days before the deadline it becomes highlighted ("hot"), and
-* use the checkbox to specify if the deadline is a deal breaker; that is if the student misses it, there are consequences. If you decide *all* deadlines are deal breakers, then just either ignore this setting or check this box for all deadlines in the course.
+* Give a goal of the deadline. 
+* Select the date and time for it.
+* Specify how many days before the deadline it becomes highlighted ("hot").
+* Use the checkbox to specify if the deadline is a "deal breaker"; that is if the student misses it, there are consequences. If you decide *all* deadlines are deal breakers, then just either ignore this setting or check this box for all deadlines in the course.
 
 Then press the Save button, and you will have a new deadline for the course.
 
-If you wish to delete a deadline, select the row, swipe left and press the delete button:
+To delete a deadline, select the line and swipe to the left (confirmation will be asked before deletion):
 
-![delete deadline](delete-row-screenshot.png)
+![Edit course swiping](images/delete-deadline-swipe.png)
+
 
 
 ## Contributing
