@@ -28,10 +28,6 @@
 		316ED3542CBE2E4900F150DE /* CourseDeadlineCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseDeadlineCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		316ED35E2CBE2E4900F150DE /* CourseDeadlineCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CourseDeadlineCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31BA4FE02DCCA4FA008FAF9D /* README.markdown */ = {isa = PBXFileReference; explicitFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
-		31BA500A2DCCBB81008FAF9D /* edit-row-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-row-screenshot.png"; sourceTree = "<group>"; };
-		31BA500B2DCCBBAC008FAF9D /* delete-row-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-row-screenshot.png"; sourceTree = "<group>"; };
-		8623F8E42DCCAC3B00D78E53 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
-		8623F8E62DCCB0DC00D78E53 /* edit-deadline-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit-deadline-screenshot.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -66,6 +62,11 @@
 			path = CourseDeadlineCounterUITests;
 			sourceTree = "<group>";
 		};
+		31D0E76E2DCDEA3400C31E35 /* images */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +97,8 @@
 		316ED33A2CBE2E4700F150DE = {
 			isa = PBXGroup;
 			children = (
-				8623F8E42DCCAC3B00D78E53 /* screenshot.png */,
-				31BA500B2DCCBBAC008FAF9D /* delete-row-screenshot.png */,
-				31BA500A2DCCBB81008FAF9D /* edit-row-screenshot.png */,
-				8623F8E62DCCB0DC00D78E53 /* edit-deadline-screenshot.png */,
 				31BA4FE02DCCA4FA008FAF9D /* README.markdown */,
+				31D0E76E2DCDEA3400C31E35 /* images */,
 				316ED3452CBE2E4700F150DE /* CourseDeadlineCounter */,
 				316ED3572CBE2E4900F150DE /* CourseDeadlineCounterTests */,
 				316ED3612CBE2E4900F150DE /* CourseDeadlineCounterUITests */,

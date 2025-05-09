@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     " Course is now %lld days old, %@ left to go." : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -18,6 +19,7 @@
       }
     },
     " Starts in %lld days" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -28,6 +30,7 @@
       }
     },
     "%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -46,6 +49,9 @@
           }
         }
       }
+    },
+    "%@ left to go" : {
+
     },
     "%lld days before deadline" : {
       "localizations" : {
@@ -68,6 +74,12 @@
         }
       }
     },
+    "Add new course" : {
+
+    },
+    "Add new deadline" : {
+
+    },
     "ago" : {
       "localizations" : {
         "fi" : {
@@ -77,6 +89,9 @@
           }
         }
       }
+    },
+    "Cancel" : {
+
     },
     "Confirm Delete" : {
       "localizations" : {
@@ -118,6 +133,9 @@
         }
       }
     },
+    "Course is now %lld days old" : {
+
+    },
     "Course name:" : {
       "localizations" : {
         "fi" : {
@@ -129,6 +147,7 @@
       }
     },
     "Course start date is %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -169,6 +188,7 @@
       }
     },
     "Deadlines for course" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -197,6 +217,9 @@
           }
         }
       }
+    },
+    "Delete Course" : {
+
     },
     "Delete deadline" : {
       "localizations" : {
@@ -228,6 +251,9 @@
         }
       }
     },
+    "Do you really want to delete the course with all deadlines?" : {
+
+    },
     "Edit" : {
       "localizations" : {
         "fi" : {
@@ -247,6 +273,9 @@
           }
         }
       }
+    },
+    "Edit deadline" : {
+
     },
     "Edit Deadline" : {
       "localizations" : {
@@ -290,6 +319,16 @@
         }
       }
     },
+    "Has %lld deadlines (%lld completed)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Has %1$lld deadlines (%2$lld completed)"
+          }
+        }
+      }
+    },
     "If deadline is not met, course is considered failed or grade is lowered" : {
       "localizations" : {
         "fi" : {
@@ -311,6 +350,7 @@
       }
     },
     "left" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -342,6 +382,7 @@
       }
     },
     "New Deadline" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -370,6 +411,9 @@
           }
         }
       }
+    },
+    "Select course from the list or create a new course" : {
+
     },
     "Set deadline:" : {
       "localizations" : {
@@ -400,6 +444,15 @@
           }
         }
       }
+    },
+    "Starts at %@" : {
+
+    },
+    "Starts in %lld days" : {
+
+    },
+    "until deadline" : {
+
     }
   },
   "version" : "1.0"

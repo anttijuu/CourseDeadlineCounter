@@ -10,6 +10,7 @@ import SwiftUI
 struct DeadlineEditView: View {
 	@Environment(Deadlines.self) var deadlines
 	
+	var course: Course
 	@Bindable var deadline: Deadline
 	
 	@Environment(\.dismiss) var dismiss
@@ -28,7 +29,7 @@ struct DeadlineEditView: View {
 	
 	var body: some View {
 		VStack(spacing: 8) {
-			Text("Edit Deadline")
+			Text("Edit deadline")
 				.font(.title)
 			Form {
 				TextField("SF Symbol name:", text: $editSymbolName)
@@ -81,7 +82,7 @@ struct DeadlineEditView: View {
 		deadline.goal = editDeadlineGoal
 		deadline.becomesHotDaysBefore = editDaysComesHot
 		deadline.isDealBreaker = editIsDealBreaker
-		try deadlines.currentCourse.store(to: Deadlines.storagePath)
+		try course.store(to: Deadlines.storagePath)
 		dismiss()
 	}
 }

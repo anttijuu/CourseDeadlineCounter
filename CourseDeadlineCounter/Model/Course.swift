@@ -86,7 +86,7 @@ class Course: Codable {
 		}
 	}
 	
-	func restore(from path: URL, for courseNamed: String) throws -> Course {
+	static func restore(from path: URL, for courseNamed: String) throws -> Course {
 		let fileManager = FileManager.default
 		let filePath = path.appending(path: courseNamed + ".json").path(percentEncoded: false)
 		guard fileManager.fileExists(atPath: filePath) else {
@@ -95,10 +95,10 @@ class Course: Codable {
 		let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
 		let course = try JSONDecoder().decode(Course.self, from: data)
 		course.deadlines.sort()
-		self.uuid = course.uuid
-		self.name = course.name
-		self.startDate = course.startDate
-		self.deadlines = course.deadlines
+		course.uuid = course.uuid
+		course.name = course.name
+		course.startDate = course.startDate
+		course.deadlines = course.deadlines
 		return course
 	}
 }

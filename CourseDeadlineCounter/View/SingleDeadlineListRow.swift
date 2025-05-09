@@ -10,6 +10,7 @@ import SwiftUI
 struct SingleDeadlineListRow: View {
 	@Environment(Deadlines.self) var deadlines
 	
+	@Bindable var course: Course
 	@Bindable var deadline: Deadline
 	
 	var body: some View {
@@ -27,10 +28,10 @@ struct SingleDeadlineListRow: View {
 					}
 					Text(deadline.date, style: .relative)
 						.padding(.trailing, 0)
-					Text(deadline.isReached ? "ago" : "left")
+					Text(deadline.isReached ? "ago" : "until deadline")
 						.padding(.leading, 0)
 					if !deadline.isReached {
-						Text("\(deadline.percentageLeft(from: deadlines.currentCourse.startDate).formatted(.percent)) calendar time left")
+						Text("\(deadline.percentageLeft(from: course.startDate).formatted(.percent)) calendar time left")
 							.bold()
 							.foregroundStyle(deadlineColor)
 					}
