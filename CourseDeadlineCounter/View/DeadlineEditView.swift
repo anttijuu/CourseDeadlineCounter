@@ -24,7 +24,7 @@ struct DeadlineEditView: View {
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
 	
-	let range = 0...100
+	let range = 0...100 // TODO: CHANGE to 1...100 when testing is finished, alerts on previous day minimum.
 	let step = 1
 	
 	var body: some View {
@@ -43,7 +43,7 @@ struct DeadlineEditView: View {
 						in: range,
 						step: step
 					) {
-						Text("Deadline becomes a hot thing")
+						Text("Deadline becomes hot")
 					}
 					Text("\(editDaysComesHot) days before deadline")
 				}
@@ -88,7 +88,11 @@ struct DeadlineEditView: View {
 			if changeToAlert {
 				let alertDate = deadline.date.addingTimeInterval(-Double(deadline.becomesHotDaysBefore) * 86400)
 				await Notifications.shared.updateNotification(
-					deadlineID: deadline.uuid.uuidString, name: deadline.goal, date: alertDate, courseName: course.name
+					deadlineID: deadline.uuid.uuidString,
+					name: deadline.goal,
+					alertDate: alertDate,
+					deadlineDate: deadline.date,
+					courseName: course.name
 				)
 			}
 			dismiss()

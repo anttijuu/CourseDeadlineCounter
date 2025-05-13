@@ -12,7 +12,7 @@ Course deadlines are usually announced at the introductory lecture of the course
 
 This tool was built for teachers to show all the relevant course deadlines in one list. For example, when opening the weekly lecture, the teacher can share the app screen and remind the students about the upcoming deadlines as well as other later deadlines.
 
-> Note that the app (currently) does not notify or alert about upcoming deadlines, just displays them.
+The app notifies about the deadline coming near, if user gives the permission to use alerts. For details on displaying the alert, see editing a deadline below.
 
 
 ## Functionality and User Interface
@@ -42,7 +42,7 @@ Additional benefit of using JSON as the file format is that anyone can implement
 > Note that the current version is not yet aware of new files added to the folder when the app is running. New files (courses) are listed only after application restart. 
  
 
-## Editing a course and deadlines
+## Editing a course and adding deadlines
 
 To add a new course, press the toolbar button above the course list and enter the course name and the starting date. The starting date is used to calculate how many percent of the course has been passed, relative to the last deadline of the course. After saving, you can edit the course details by swiping the course row to right:
 
@@ -52,7 +52,12 @@ To move a course to the Trash, swipe to the left (confirmation will be asked bef
 
 ![Edit course swiping](images/delete-course-swipe.png)
 
-When you have added a new course, you may add new deadlines and/or edit them. Press the new deadline button (above the course details in the toolbar), and a new deadline is added to the list of deadlines. Select the row in the list, and swipe right. You will see the edit deadline button:
+When you have added a new course, you may add new deadlines and/or edit them. Press the new deadline button (above the course details in the toolbar), and a new deadline is added to the list of deadlines. 
+
+
+## Editing the deadlines 
+
+Select the row in the course deadlines list, and swipe right. You will see the edit deadline button:
 
 ![edit row](images/edit-deadline-swipe.png)
 
@@ -63,10 +68,16 @@ Press the edit button and you may then edit the details of the deadline:
 * Enter the symbol you wish to use for the deadline. Download the [SF symbols](https://developer.apple.com/sf-symbols/) app to view suitable symbols you would like to use with the deadline.
 * Give a goal of the deadline. 
 * Select the date and time for it.
-* Specify how many days before the deadline it becomes highlighted ("hot").
+* Specify how many days before the deadline it becomes highlighted ("hot"). This also determines when the alert for the deadline is shown.
 * Use the checkbox to specify if the deadline is a "deal breaker"; that is if the student misses it, there are consequences. If you decide *all* deadlines are deal breakers, then just either ignore this setting or check this box for all deadlines in the course.
 
 Then press the Save button, and you will have a new deadline for the course.
+
+When saving the deadline, Mac will ask for the permission to display alerts. If the user allows this, the alert for the deadline is shown when it comes near:
+
+![Deadline alert](deadline-notification.png)
+ 
+If the deadline is set to Friday next week at 16:00 hrs, and the deadline becomes "hot" one day before the deadline, the alert is shown Thursday next week at 16:00 hrs. No further alerts for the deadline are shown, unless the deadline is edited.
 
 To delete a deadline, select the line and swipe to the left (confirmation will be asked before deletion):
 
@@ -76,7 +87,6 @@ To delete a deadline, select the line and swipe to the left (confirmation will b
 ## Planned Features
 
 - [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file with a text editor. The course list can then be updated automatically, without the need to restart the app. Alternatively, add a refresh button but that is kind of blah.
-- [ ] Alert about approaching deadlines.
 - [ ] Share button to send the course.json file to someone.
 - [ ] Selecting the deadline symbol from a list of (limited) options (hammer, notepad, seal, person, person.2, graduationcap.fill,...).
 

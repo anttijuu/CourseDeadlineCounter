@@ -26,16 +26,26 @@ struct SingleDeadlineListRow: View {
 						Image(systemName: "exclamationmark.triangle.fill")
 							.foregroundStyle(deadlineColor)
 					}
-					Text(deadline.date, style: .relative)
-						.padding(.trailing, 0)
-					Text(deadline.isReached ? "ago" : "until deadline")
-						.padding(.leading, 0)
-					if !deadline.isReached {
-						Text("\(deadline.percentageLeft(from: course.startDate).formatted(.percent)) calendar time left")
-							.bold()
+					if deadline.date > Date.now {
+						Text(deadline.date, style: .relative)
+							.padding(.trailing, 0)
+						Text("until deadline")
+							.padding(.leading, 0)
+						if !deadline.isReached {
+							Text("\(deadline.percentageLeft(from: course.startDate).formatted(.percent)) calendar time left")
+								.bold()
+						}
+					} else {
+						Text("Deadline passed")
+							.padding(.trailing, 0)
+						Text(deadline.date, style: .relative)
+							.padding([.leading, .trailing], 0)
+						Text("ago")
+							.padding(.leading, 0)
 					}
 				}
 				.font(.title3)
+				.foregroundStyle(deadlineColor)
 				VStack(alignment: .leading) {
 					Text(deadline.goal)
 						.font(.title3)

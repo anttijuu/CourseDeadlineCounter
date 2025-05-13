@@ -163,7 +163,7 @@
         }
       }
     },
-    "Deadline becomes a hot thing" : {
+    "Deadline becomes hot" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -179,6 +179,33 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deadlinen tavoite:"
+          }
+        }
+      }
+    },
+    "Deadline in %@ is on %@)" : {
+      "comment" : "Notification with course name and actual deadline date and time as string",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Deadline in %1$@ is on %2$@)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssin %1$@ deadline on %2$@"
+          }
+        }
+      }
+    },
+    "Deadline passed" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadline on mennyt"
           }
         }
       }
@@ -269,14 +296,58 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Has %1$lld deadlines (%2$lld completed)"
+            "state" : "translated",
+            "value" : "Has %#@arg1@ (%2$lld completed)"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "one deadline"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg deadlines"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$lld deadlinea (%2$lld ohitettu)"
+            "value" : "%#@arg1@ (%2$lld ohitettu)"
+          },
+          "substitutions" : {
+            "arg1" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "Yksi deadline"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg deadlinea"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
