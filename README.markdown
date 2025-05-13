@@ -91,6 +91,7 @@ The notifications for the deadline are cancelled when deleting it. Also if you d
 
 ## Planned Features
 
+- [ ] Add an icon for the app.
 - [ ] Observing the folder where the course files are, in case user copies new files there from elsewhere, or edits a course file with a text editor. The course list can then be updated automatically, without the need to restart the app. Alternatively, add a refresh button but that is kind of blah.
 - [ ] Share button to send the course.json file to someone.
 - [ ] Selecting the deadline symbol from a list of (limited) options shown as icons instead of text (e.g. hammer, notepad, seal, person, person.2, graduationcap.fill,...).
