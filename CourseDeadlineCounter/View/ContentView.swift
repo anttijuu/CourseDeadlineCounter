@@ -165,7 +165,7 @@ struct ContentView: View {
 					}
 				}
 			} else {
-				Text("Select course from the list or create a new course")
+				ContentUnavailableView("Select course from the list or create a new course", systemImage: "book.and.wrench")
 			}
 		})
 		.sheet(isPresented: $showNewCourseView) {
@@ -188,10 +188,6 @@ struct ContentView: View {
 		.onAppear() {
 			do {
 				try deadlines.readCourseList()
-				if deadlines.courses.isEmpty {
-					editingNewCourse = false
-					showCourseEditView.toggle();
-				}
 			} catch {
 				errorMessage = error.localizedDescription
 				isError = true
@@ -209,7 +205,7 @@ struct ContentView: View {
 				}
 			}
 			Button("Cancel", role: .cancel) {
-				
+				// Empty
 			}
 		}
 		

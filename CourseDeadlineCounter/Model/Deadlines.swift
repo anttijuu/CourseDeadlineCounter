@@ -53,10 +53,13 @@ class Deadlines {
 				}
 			}
 			if !courseNames.isEmpty {
-				log.debug("Found \(self.courses.count) json files in directory")
+				log.debug("Found \(courseNames.count) json files in directory")
 				for courseName in courseNames {
 					try loadDeadlines(for: courseName)
 				}
+				log.debug("Read \(self.courses.count) course data from json files")
+			} else {
+				log.info("No JSON files in the app directory")
 			}
 		}
 	}
