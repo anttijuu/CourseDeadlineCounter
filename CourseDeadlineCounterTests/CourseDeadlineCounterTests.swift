@@ -11,11 +11,13 @@ import Testing
 
 struct CourseDeadlineCounterTests {
 
-    @Test func exportToJSON() async throws {
-		 let course = Deadlines.preview.deadlines
-		 let json = try JSONEncoder().encode(course)
-		 #expect(json.count > 0)
-		 try course.store(to: Deadlines.preview.storagePath)		 
-    }
+	@Test
+	func testDateTimeRoundings() {
+		let date = Date.now
+		let rounded = date.secondsRoundedToZero()
+		#expect(rounded.secondsRoundedToZero() != date)
+		print(date)
+		print(rounded)
+	}
 
 }

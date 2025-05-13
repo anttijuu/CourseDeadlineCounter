@@ -55,7 +55,7 @@ struct CourseEditView: View {
 		let oldCourseName = course.name
 		let newCourseName = editCourseName
 		course.name = newCourseName
-		course.startDate = editStartDate
+		course.startDate = editStartDate.toMidnight()
 		if oldCourseName != newCourseName {
 			try deadlines.saveCourse(for: course, oldName: oldCourseName)
 		} else {

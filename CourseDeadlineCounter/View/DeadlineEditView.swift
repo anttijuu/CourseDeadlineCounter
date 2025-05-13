@@ -14,7 +14,7 @@ struct DeadlineEditView: View {
 	@Bindable var deadline: Deadline
 	
 	@Environment(\.dismiss) var dismiss
-
+	
 	@State var editSymbolName: String = ""
 	@State var editDeadlineGoal: String = ""
 	@State var editDeadline: Date = .now
@@ -24,9 +24,23 @@ struct DeadlineEditView: View {
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
 	
-	let range = 0...100 // TODO: CHANGE to 1...100 when testing is finished, alerts on previous day minimum.
+	let hotDaysRange = 1...30 // alert range 1...30 days before deadline
 	let step = 1
+
+	let deadlineDateRange: ClosedRange<Date>
 	
+	init(course: Course, deadline: Deadline) {
+		self.course = course
+		self.deadline = deadline
+		deadlineDateRange = {
+			let calendar = Calendar.current
+			let startComponents = calendar.dateComponents([.year, .month, .day], from: course.startDate)
+			let endDate = course.startDate.addingTimeInterval(60 * 60 * 24 * 365)
+			return calendar.date(from:startComponents)!
+			...
+			endDate
+		}()
+	}
 	var body: some View {
 		VStack(spacing: 8) {
 			Text("Edit deadline")
@@ -36,11 +50,11 @@ struct DeadlineEditView: View {
 				Text("See SF Symbols app for available symbols")
 					.font(.caption)
 				TextField("Deadline goal:", text: $editDeadlineGoal)
-				DatePicker("Set deadline:", selection: $editDeadline, displayedComponents: [.date, .hourAndMinute])
+				DatePicker("Set deadline:", selection: $editDeadline, in: deadlineDateRange, displayedComponents: [.date, .hourAndMinute])
 				HStack {
-						Stepper(
+					Stepper(
 						value: $editDaysComesHot,
-						in: range,
+						in: hotDaysRange,
 						step: step
 					) {
 						Text("Deadline becomes hot")
@@ -53,12 +67,12 @@ struct DeadlineEditView: View {
 			}
 			Spacer()
 			Button("Save", action: {
-					do {
-						try save()
-					} catch {
-						isError = true
-						errorMessage = error.localizedDescription
-					}
+				do {
+					try save()
+				} catch {
+					isError = true
+					errorMessage = error.localizedDescription
+				}
 			})
 		}
 		.padding()
@@ -79,7 +93,7 @@ struct DeadlineEditView: View {
 	private func save() throws {
 		Task {
 			let changeToAlert = deadline.date != editDeadline || deadline.goal != editDeadlineGoal || deadline.becomesHotDaysBefore != editDaysComesHot
-			deadline.date = editDeadline
+			deadline.date = editDeadline.secondsRoundedToZero()
 			deadline.symbol = editSymbolName
 			deadline.goal = editDeadlineGoal
 			deadline.becomesHotDaysBefore = editDaysComesHot
