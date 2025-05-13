@@ -10,6 +10,7 @@ import AppKit
 import OSLog
 
 // TODO: Make sure entering new course name does not clash with existing course name.
+// TODO: Make sure deadlines are after the course start date.
 
 @Observable
 class Deadlines {

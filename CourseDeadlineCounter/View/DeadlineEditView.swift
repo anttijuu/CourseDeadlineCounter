@@ -24,7 +24,7 @@ struct DeadlineEditView: View {
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
 	
-	let range = 1...100
+	let range = 0...100
 	let step = 1
 	
 	var body: some View {

@@ -14,7 +14,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kurssien Deadlinet"
+            "value" : "Kurssien deadlinet"
           }
         }
       }
@@ -32,7 +32,7 @@
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "(c) Antti Juustila, 2024-2025"
+            "value" : "© Antti Juustila, 2024-2025"
           }
         }
       }
