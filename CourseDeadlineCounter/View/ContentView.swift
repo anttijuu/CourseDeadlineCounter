@@ -218,6 +218,7 @@ struct ContentView: View {
 	private func delete(_ deadline: Deadline, from course: Course) {
 		do {
 			try course.remove(deadline)
+			Notifications.shared.removeNotification(for: deadline)
 		} catch {
 			isError = true
 			errorMessage = error.localizedDescription
