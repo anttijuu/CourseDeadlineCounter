@@ -16,6 +16,9 @@ class Deadline: Codable {
 	var becomesHotDaysBefore: Int
 	var isDealBreaker: Bool = false
 	
+	// Not encoded/decoded
+	var notificationUpdateNeeded: Bool = false
+	
 	enum CodingKeys: String, CodingKey {
 		case _uuid = "uuid"
 		case _date = "date"

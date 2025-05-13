@@ -9,7 +9,6 @@ import Foundation
 import AppKit
 import OSLog
 
-// TODO: Observe document folder for new files, reload list if changes in files.
 // TODO: Make sure entering new course name does not clash with existing course name.
 
 @Observable
@@ -74,6 +73,7 @@ class Deadlines {
 			log.debug("Starting to delete current course")
 			try deleteFile(for: course.name)
 			courses.removeAll(where: { $0.name == course.name })
+			Notifications.shared.removeNotifications(for: course)
 		} catch {
 			log.error("Error in deleting course \(course.name) because \(error.localizedDescription)")
 			throw DeadlineErrors.fileDeleteError(error.localizedDescription)

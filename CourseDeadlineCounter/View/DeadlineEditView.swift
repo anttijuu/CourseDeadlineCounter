@@ -53,12 +53,12 @@ struct DeadlineEditView: View {
 			}
 			Spacer()
 			Button("Save", action: {
-				do {
-					try save()
-				} catch {
-					isError = true
-					errorMessage = error.localizedDescription
-				}
+					do {
+						try save()
+					} catch {
+						isError = true
+						errorMessage = error.localizedDescription
+					}
 			})
 		}
 		.padding()
@@ -77,12 +77,18 @@ struct DeadlineEditView: View {
 	}
 	
 	private func save() throws {
-		deadline.date = editDeadline
-		deadline.symbol = editSymbolName
-		deadline.goal = editDeadlineGoal
-		deadline.becomesHotDaysBefore = editDaysComesHot
-		deadline.isDealBreaker = editIsDealBreaker
-		try course.store()
-		dismiss()
+		Task {
+			let changeToAlert = deadline.date != editDeadline || deadline.goal != editDeadlineGoal || deadline.becomesHotDaysBefore != editDaysComesHot
+			deadline.date = editDeadline
+			deadline.symbol = editSymbolName
+			deadline.goal = editDeadlineGoal
+			deadline.becomesHotDaysBefore = editDaysComesHot
+			deadline.isDealBreaker = editIsDealBreaker
+			try course.store()
+			if changeToAlert {
+				await Notifications.shared.updateNotification(for: deadline, in: course)
+			}
+			dismiss()
+		}
 	}
 }

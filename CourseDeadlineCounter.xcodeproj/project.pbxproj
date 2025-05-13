@@ -38,6 +38,7 @@
 				Model/Deadline.swift,
 				Model/DeadlineErrors.swift,
 				Model/Deadlines.swift,
+				Model/Notifications.swift,
 			);
 			target = 316ED3532CBE2E4900F150DE /* CourseDeadlineCounterTests */;
 		};
