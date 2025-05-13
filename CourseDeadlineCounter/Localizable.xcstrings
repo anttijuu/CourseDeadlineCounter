@@ -122,6 +122,9 @@
         }
       }
     },
+    "Course deadline is near" : {
+      "comment" : "Alert about a course deadline approaching"
+    },
     "Course is now %lld days old" : {
       "localizations" : {
         "fi" : {

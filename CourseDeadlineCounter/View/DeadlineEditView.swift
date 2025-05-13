@@ -86,7 +86,10 @@ struct DeadlineEditView: View {
 			deadline.isDealBreaker = editIsDealBreaker
 			try course.store()
 			if changeToAlert {
-				await Notifications.shared.updateNotification(for: deadline, in: course)
+				let alertDate = deadline.date.addingTimeInterval(-Double(deadline.becomesHotDaysBefore) * 86400)
+				await Notifications.shared.updateNotification(
+					deadlineID: deadline.uuid.uuidString, name: deadline.goal, date: alertDate, courseName: course.name
+				)
 			}
 			dismiss()
 		}
