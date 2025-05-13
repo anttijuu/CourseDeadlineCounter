@@ -4,7 +4,7 @@
 
 Course Deadlines is a tool that instructors can use to make course deadlines more visible to students, keeping everybody aware of the deadlines, throughout the course implementation. Students may also use the same app, and add their own deadlines to the app also, for all the courses they are taking.
 
-ℹ️ The app is localized to English and Finnish, the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
+ℹ️ The app is localized to English and Finnish, most the screenshots in this document are in English. Language is selected automatically based on your Mac's language settings.
 
 ## And What For?
 
@@ -78,7 +78,7 @@ When saving the deadline, Mac will ask  for the permission (the first time) to d
 
 ![Deadline alert](images/deadline-notification.png)
  
-If the deadline is set to Friday next week at 16:00 hrs, and the deadline becomes "hot" one day before the deadline, the alert is shown Thursday next week at 16:00 hrs. No further alerts for the deadline are shown, unless the deadline is edited.
+If the deadline is set to, for example, Friday next week at 16:00 hrs, and the deadline becomes "hot" one day before the deadline, the alert is shown on Thursday next week at 16:00 hrs. No further alerts for the deadline are shown, unless the deadline is edited.
 
 You may revoke or configure the notification permissions for the app using the macOS Settings app.
 
