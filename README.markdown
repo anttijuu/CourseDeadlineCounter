@@ -75,7 +75,7 @@ Then press the Save button, and you will have a new deadline for the course.
 
 When saving the deadline, Mac will ask for the permission to display alerts. If the user allows this, the alert for the deadline is shown when it comes near:
 
-![Deadline alert](deadline-notification.png)
+![Deadline alert](images/deadline-notification.png)
  
 If the deadline is set to Friday next week at 16:00 hrs, and the deadline becomes "hot" one day before the deadline, the alert is shown Thursday next week at 16:00 hrs. No further alerts for the deadline are shown, unless the deadline is edited.
 
