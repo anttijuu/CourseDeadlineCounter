@@ -49,12 +49,20 @@
 			);
 			target = 316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */;
 		};
+		31D0E9092DD3B0A700C31E35 /* Exceptions for "CourseDeadlineCounter" folder in "CourseDeadlineCounter" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 316ED3422CBE2E4700F150DE /* CourseDeadlineCounter */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		316ED3452CBE2E4700F150DE /* CourseDeadlineCounter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				31D0E9092DD3B0A700C31E35 /* Exceptions for "CourseDeadlineCounter" folder in "CourseDeadlineCounter" target */,
 				316ED3742CBE2E8900F150DE /* Exceptions for "CourseDeadlineCounter" folder in "CourseDeadlineCounterTests" target */,
 			);
 			path = CourseDeadlineCounter;
