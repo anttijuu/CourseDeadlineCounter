@@ -16,8 +16,8 @@ class Deadline: Codable {
 	var becomesHotDaysBefore: Int
 	var isDealBreaker: Bool = false
 	
-	// Not encoded/decoded
-	var notificationUpdateNeeded: Bool = false
+	// Not encoded/decoded, needed to change state in isReached, to update the view
+	var viewUpdateNeeded: Bool = false
 	
 	enum CodingKeys: String, CodingKey {
 		case _uuid = "uuid"
@@ -38,7 +38,8 @@ class Deadline: Codable {
 	}
 	
 	var isReached: Bool {
-		date <= Date.now
+		viewUpdateNeeded = date <= Date.now
+		return viewUpdateNeeded
 	}
 	
 	var isHot: Bool {

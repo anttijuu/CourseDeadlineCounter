@@ -34,7 +34,7 @@ struct DeadlineEditView: View {
 		self.deadline = deadline
 		deadlineDateRange = {
 			let calendar = Calendar.current
-			let startComponents = calendar.dateComponents([.year, .month, .day], from: course.startDate)
+			let startComponents = calendar.dateComponents([.year, .month, .day], from: course.startDate) // Date.now)
 			let endDate = course.startDate.addingTimeInterval(60 * 60 * 24 * 365)
 			return calendar.date(from:startComponents)!
 			...

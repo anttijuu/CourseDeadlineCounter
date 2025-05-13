@@ -12,7 +12,7 @@ struct SingleDeadlineListRow: View {
 	
 	@Bindable var course: Course
 	@Bindable var deadline: Deadline
-	
+
 	var body: some View {
 		HStack(spacing: 12) {
 			Image(systemName: deadline.symbol)
