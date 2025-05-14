@@ -183,7 +183,7 @@ struct ContentView: View {
 			}
 		})
 		.sheet(isPresented: $showNewCourseView) {
-			CourseEditView(course: deadlines.newCourse())
+			CourseEditView(course: nil)
 				.environment(deadlines)
 				.frame(minWidth: 600, minHeight: 400)
 		}

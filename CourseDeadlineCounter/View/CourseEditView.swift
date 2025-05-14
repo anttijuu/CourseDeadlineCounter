@@ -12,7 +12,7 @@ struct CourseEditView: View {
 	
 	@Environment(\.dismiss) var dismiss
 		
-	var course: Course
+	@State var course: Course?
 	
 	@State var editCourseName: String = NSLocalizedString("New Course", comment: "User is creating a new course")
 	@State var editStartDate: Date = Date.now
@@ -42,8 +42,10 @@ struct CourseEditView: View {
 		}
 		.padding()
 		.onAppear {
-			editCourseName = course.name
-			editStartDate = course.startDate
+			if let course {
+				editCourseName = course.name
+				editStartDate = course.startDate
+			}
 		}
 		.alert("Could not save Course", isPresented: $isError, actions: {
 			// No action
@@ -58,14 +60,26 @@ struct CourseEditView: View {
 			isError = true
 			return false
 		}
-		let oldCourseName = course.name
-		let newCourseName = editCourseName
-		course.name = newCourseName
-		course.startDate = editStartDate.toMidnight()
-		if oldCourseName != newCourseName {
-			try deadlines.saveCourse(for: course, oldName: oldCourseName)
+		if /*isNew &&*/ deadlines.hasCourse(withName: editCourseName) {
+			errorMessage = NSLocalizedString("Courses must have a unique name", comment: "Shown if user tries to save a course with a name of an existiing course")
+			isError = true
+			return false
+		}
+		if let course {
+			let oldCourseName = course.name
+			let newCourseName = editCourseName
+			course.name = editCourseName
+			course.startDate = editStartDate.toMidnight()
+			if newCourseName != editCourseName {
+				try deadlines.saveCourse(for: course, oldName: oldCourseName)
+			} else {
+				try deadlines.saveCourse(for: course)
+			}
 		} else {
-			try deadlines.saveCourse(for: course)
+			course = deadlines.newCourse()
+			course!.name = editCourseName
+			course!.startDate = editStartDate.toMidnight()
+			try deadlines.saveCourse(for: course!)
 		}
 		return true
 	}

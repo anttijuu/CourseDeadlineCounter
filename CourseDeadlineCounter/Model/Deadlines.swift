@@ -73,6 +73,10 @@ class Deadlines {
 		)
 	}
 	
+	func hasCourse(withName: String) -> Bool {
+		return courses.contains(where: { $0.name == withName } )
+	}
+	
 	func delete(_ course: Course) throws {
 		do {
 			log.debug("Starting to delete current course")
