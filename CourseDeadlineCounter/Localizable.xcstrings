@@ -413,6 +413,26 @@
         }
       }
     },
+    "Next deadline in " : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuraava deadline"
+          }
+        }
+      }
+    },
+    "No deadlines" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei deadlineja"
+          }
+        }
+      }
+    },
     "Pick" : {
       "localizations" : {
         "fi" : {

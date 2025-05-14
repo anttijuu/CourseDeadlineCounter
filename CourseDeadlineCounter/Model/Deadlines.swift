@@ -57,6 +57,7 @@ class Deadlines {
 				for courseName in courseNames {
 					try loadDeadlines(for: courseName)
 				}
+				courses.sort()
 				log.debug("Read \(self.courses.count) course data from json files")
 			} else {
 				log.info("No JSON files in the app directory")

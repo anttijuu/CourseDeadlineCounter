@@ -53,6 +53,10 @@ class Course: Codable {
 		return 0
 	}
 	
+	func nextDeadlineDate() -> Date? {
+		deadlines.first(where: { $0.date >= Date.now })?.date
+	}
+	
 	func add(_ deadline: Deadline) throws {
 		deadlines.append(deadline)
 		deadlines.sort()

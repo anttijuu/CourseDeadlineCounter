@@ -67,7 +67,7 @@ extension Deadline: Identifiable, Equatable, Comparable, Hashable {
 	}
 	
 	static func == (lhs: Deadline, rhs: Deadline) -> Bool {
-		lhs.date == rhs.date
+		lhs.uuid == rhs.uuid
 	}
 	
 	static func < (lhs: Deadline, rhs: Deadline) -> Bool {

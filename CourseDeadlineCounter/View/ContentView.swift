@@ -65,6 +65,21 @@ struct CourseDetailsView: View {
 	}
 }
 
+struct CourseListRowView: View {
+	let course: Course
+	var body: some View {
+		VStack(alignment: .leading) {
+			Text(course.name)
+				.font(.title3)
+			if let date = course.nextDeadlineDate() {
+				Text("Next deadline in ") + Text(date, style: .relative)
+			} else {
+				Text("No deadlines")
+			}
+		}
+	}
+}
+
 struct ContentView: View {
 	@Environment(Deadlines.self) var deadlines
 	@State private var selectedCourse: Course.ID?
@@ -84,8 +99,7 @@ struct ContentView: View {
 	var body: some View {
 		NavigationSplitView(sidebar: {
 			List(deadlines.courses, selection: $selectedCourse) { course in
-				Text(course.name)
-					.font(.title3)
+				CourseListRowView(course: course)
 					.contextMenu {
 						EditButton(label: "Edit Course", action: { showCourseEditView.toggle() } )
 							.disabled(selectedCourse == nil)
