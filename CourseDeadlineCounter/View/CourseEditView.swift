@@ -31,8 +31,9 @@ struct CourseEditView: View {
 			Spacer()
 			Button("Save", action: {
 				do {
-					try save()
-					dismiss()
+					if try save() {
+						dismiss()
+					}
 				} catch {
 					isError = true
 					errorMessage = error.localizedDescription
@@ -51,7 +52,12 @@ struct CourseEditView: View {
 		})
 	}
 	
-	private func save() throws {
+	private func save() throws -> Bool {
+		if editCourseName.isEmpty {
+			errorMessage = NSLocalizedString("Course must have a name", comment: "Shown if user tries to save a course without a name")
+			isError = true
+			return false
+		}
 		let oldCourseName = course.name
 		let newCourseName = editCourseName
 		course.name = newCourseName
@@ -61,5 +67,6 @@ struct CourseEditView: View {
 		} else {
 			try deadlines.saveCourse(for: course)
 		}
+		return true
 	}
 }

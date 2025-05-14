@@ -153,6 +153,17 @@
         }
       }
     },
+    "Course must have a name" : {
+      "comment" : "Shown if user tries to save a course without a name",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssilla on oltava nimi"
+          }
+        }
+      }
+    },
     "Course name:" : {
       "localizations" : {
         "fi" : {
@@ -206,6 +217,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kurssin %1$@ deadline on %2$@"
+          }
+        }
+      }
+    },
+    "Deadline must have a goal" : {
+      "comment" : "Shown if user tries to save a deadline without a goal",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadlinella on oltava tavoite"
           }
         }
       }

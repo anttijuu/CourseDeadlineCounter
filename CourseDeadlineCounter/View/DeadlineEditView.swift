@@ -101,10 +101,15 @@ struct DeadlineEditView: View {
 	}
 	
 	private func save() throws {
+		if editDeadlineGoal.isEmpty {
+			errorMessage = NSLocalizedString("Deadline must have a goal", comment: "Shown if user tries to save a deadline without a goal")
+			isError = true
+			return
+		}
 		Task {
 			let changeToAlert = deadline.date != editDeadline || deadline.goal != editDeadlineGoal || deadline.becomesHotDaysBefore != editDaysComesHot
 			deadline.date = editDeadline.secondsRoundedToZero()
-			deadline.symbol = editSymbolName
+			deadline.symbol = editSymbolName.isEmpty ? "hammer" : editSymbolName
 			deadline.goal = editDeadlineGoal
 			deadline.becomesHotDaysBefore = editDaysComesHot
 			deadline.isDealBreaker = editIsDealBreaker
