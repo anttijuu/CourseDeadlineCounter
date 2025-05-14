@@ -15,6 +15,7 @@ struct SymbolPickerView: View {
 		"hammer",
 		"pencil.and.list.clipboard",
 		"checkmark.seal",
+		"checklist.checked",
 		"person",
 		"person.2",
 		"person.3",
