@@ -15,7 +15,7 @@ struct DeadlineEditView: View {
 	
 	@Environment(\.dismiss) var dismiss
 	
-	@State var editSymbolName: String = ""
+	@State var editSymbolName: String = "hammer"
 	@State var editDeadlineGoal: String = ""
 	@State var editDeadline: Date = .now
 	@State var editDaysComesHot: Int = 14
@@ -23,6 +23,8 @@ struct DeadlineEditView: View {
 	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
+	
+	@State var showSymbolPickerView: Bool = false
 	
 	let hotDaysRange = 1...30 // alert range 1...30 days before deadline
 	let step = 1
@@ -46,7 +48,15 @@ struct DeadlineEditView: View {
 			Text("Edit deadline")
 				.font(.title)
 			Form {
-				TextField("SF Symbol name:", text: $editSymbolName)
+				HStack {
+					TextField("SF Symbol name:", text: $editSymbolName)
+					Button("Pick") {
+						showSymbolPickerView.toggle()
+					}
+					.sheet(isPresented: $showSymbolPickerView) {
+						SymbolPickerView(symbolName: $editSymbolName)
+					}
+				}
 				Text("See SF Symbols app for available symbols")
 					.font(.caption)
 				TextField("Deadline goal:", text: $editDeadlineGoal)

@@ -82,6 +82,16 @@
         }
       }
     },
+    "Close" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje"
+          }
+        }
+      }
+    },
     "Confirm Delete" : {
       "localizations" : {
         "fi" : {
@@ -260,6 +270,16 @@
         }
       }
     },
+    "Enter a symbol name or pick one from below" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anna symbolin nimi tai valitse listalta"
+          }
+        }
+      }
+    },
     "Error" : {
       "localizations" : {
         "fi" : {
@@ -393,6 +413,16 @@
         }
       }
     },
+    "Pick" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse"
+          }
+        }
+      }
+    },
     "Save" : {
       "localizations" : {
         "fi" : {
@@ -409,6 +439,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Katso symboleita SF Symbols -apista"
+          }
+        }
+      }
+    },
+    "Select a symbol" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse symboli"
           }
         }
       }
@@ -469,6 +509,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alkaa %lld päivän kuluttua"
+          }
+        }
+      }
+    },
+    "Symbol name" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbolin nimi"
           }
         }
       }
