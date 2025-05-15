@@ -82,6 +82,8 @@ struct CourseListRowView: View {
 
 struct ContentView: View {
 	@Environment(Deadlines.self) var deadlines
+	@Environment(\.openWindow) private var openWindow
+
 	@State private var selectedCourse: Course.ID?
 	
 	@State var showDeadlineEditView: Bool = false
@@ -93,9 +95,12 @@ struct ContentView: View {
 	
 	@State var selectedDeadline: Deadline? = nil
 	
+	@State var showTimelineView: Bool = false
+	
 	@State var isError: Bool = false
 	@State var errorMessage: String = ""
 	
+
 	var body: some View {
 		NavigationSplitView(sidebar: {
 			List(deadlines.courses, selection: $selectedCourse) { course in
@@ -124,6 +129,12 @@ struct ContentView: View {
 						Image(systemName: "rectangle.stack.badge.plus")
 					})
 					.help("Add new course")
+					Button(action: {
+						openWindow(id: "timeline-view")
+					}, label: {
+						Image(systemName: "calendar.day.timeline.left")
+					})
+					.help("View as timeline")
 				}
 			}
 		}, detail: {

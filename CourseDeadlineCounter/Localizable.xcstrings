@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " %@" : {
+
+    },
+    "%@" : {
+
+    },
     "%@ calendar time left" : {
       "localizations" : {
         "fi" : {
@@ -456,6 +462,9 @@
         }
       }
     },
+    "No courses to show" : {
+
+    },
     "No deadlines" : {
       "localizations" : {
         "fi" : {
@@ -465,6 +474,9 @@
           }
         }
       }
+    },
+    "Now" : {
+
     },
     "Pick" : {
       "localizations" : {
@@ -576,6 +588,9 @@
         }
       }
     },
+    "Timeline View" : {
+
+    },
     "until deadline" : {
       "localizations" : {
         "fi" : {
@@ -585,6 +600,9 @@
           }
         }
       }
+    },
+    "View as timeline" : {
+
     }
   },
   "version" : "1.0"

@@ -32,6 +32,14 @@ class Course: Codable {
 		return Date.now >= startDate
 	}
 	
+	var endDate: Date {
+		deadlines.last?.date ?? Date.distantPast
+	}
+	
+	var notEnded: Bool {
+		return ((deadlines.last?.date ?? Date.distantPast) >= Date.now)
+	}
+	
 	var daysToStart: Int {
 		abs(Int(Date.now.distance(to: startDate) / 86400))
 	}

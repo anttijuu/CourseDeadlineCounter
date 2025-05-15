@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct CourseDeadlineCounterApp: App {
+	
 	@State private var deadlines = Deadlines()
 	
 	var body: some Scene {
 		WindowGroup {
 			ContentView()
+				.environment(deadlines)
+		}
+		WindowGroup("Timeline View", id: "timeline-view") {
+			TimelineView()
 				.environment(deadlines)
 		}
 	}
