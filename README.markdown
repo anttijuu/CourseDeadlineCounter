@@ -38,7 +38,7 @@ Some notes about the app with deadline examples seen below:
 
 There is also a timeline view, displaying the courses ongoing or starting in the future, placed on a timeline with weekly markers. The timeline view is shown here in dark mode:
 
-![Timeline view](timeline-view.png)
+![Timeline view](images/timeline-view.png)
 
 This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view will display a red vertical line where the current date is among the different deadlines. In the example above, both of the courses start in the future so the red line is not displayed. 
 
