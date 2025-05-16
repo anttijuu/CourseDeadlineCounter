@@ -28,8 +28,10 @@ struct TimelineView: View {
 				symbolHeight = resolved.measure(in: CGSize(width: size.width, height: 24.0)).height
 				
 				// TODO:
+				// - Draw a pink background from date-when-becomes-hot to actual deadline date.
 				// - Horizontal lines or a grid drawn at the background? Below course, separating courses better?
 				// - What if the space is too small for all ongoing courses? Zoom or scroll?
+				// - Check if looks cleaner without the grid/lines...
 				
 				let coursesToPlot = deadlines.notFinished().sorted(by: { $0.startDate < $1.startDate } )
 				if coursesToPlot.isEmpty {
@@ -54,7 +56,7 @@ struct TimelineView: View {
 						context.stroke(centerLinePath, with: .color(.red))
 					}
 					origin = .zero
-					for week in stride(from: 0, to: daysToShow, by: 7) {
+					for _ in stride(from: 0, to: daysToShow, by: 7) {
 						var weekLinePath = Path()
 						weekLinePath.move(to: origin)
 						weekLinePath.addLine(to: CGPoint(x: origin.x, y: size.height))
