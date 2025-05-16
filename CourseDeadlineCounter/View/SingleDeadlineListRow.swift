@@ -18,13 +18,13 @@ struct SingleDeadlineListRow: View {
 			Image(systemName: deadline.symbol)
 				.font(.title)
 				.symbolRenderingMode(.multicolor)
-				.foregroundStyle(deadlineColor)
+				.foregroundStyle(deadline.color)
 				.frame(width: 48)
 			VStack(alignment: .leading, spacing: 2) {
 				HStack {
 					if deadline.isDealBreaker {
 						Image(systemName: "exclamationmark.triangle.fill")
-							.foregroundStyle(deadlineColor)
+							.foregroundStyle(deadline.color)
 					}
 					if deadline.isReached {
 						Text("Deadline passed")
@@ -43,7 +43,7 @@ struct SingleDeadlineListRow: View {
 					}
 				}
 				.font(.title3)
-				.foregroundStyle(deadlineColor)
+				.foregroundStyle(deadline.color)
 				VStack(alignment: .leading) {
 					Text(deadline.goal)
 						.font(.title3)
@@ -56,15 +56,4 @@ struct SingleDeadlineListRow: View {
 		.padding(.vertical, 4)
 	}
 	
-	var deadlineColor: Color {
-		if deadline.isReached {
-			return .gray
-		} else if deadline.isHot {
-			return .red
-		} else if deadline.isDealBreaker {
-			return .orange
-		} else {
-			return .accentColor
-		}
-	}
 }

@@ -2,10 +2,30 @@
   "sourceLanguage" : "en",
   "strings" : {
     " %@" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
+          }
+        }
+      }
     },
-    "%@" : {
-
+    "%@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ (%2$@)"
+          }
+        }
+      }
     },
     "%@ calendar time left" : {
       "localizations" : {
@@ -159,6 +179,16 @@
         }
       }
     },
+    "Course List" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssilista"
+          }
+        }
+      }
+    },
     "Course must have a name" : {
       "comment" : "Shown if user tries to save a course without a name",
       "localizations" : {
@@ -234,6 +264,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kurssin %1$@ deadline on %2$@"
+          }
+        }
+      }
+    },
+    "Deadline is at the symbol location on the timeline" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deadline sijaitsee aikajanalla symbolin kohdalla."
           }
         }
       }
@@ -463,7 +503,14 @@
       }
     },
     "No courses to show" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei kursseja näytettäväksi"
+          }
+        }
+      }
     },
     "No deadlines" : {
       "localizations" : {
@@ -476,7 +523,14 @@
       }
     },
     "Now" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyt"
+          }
+        }
+      }
     },
     "Pick" : {
       "localizations" : {
@@ -588,8 +642,25 @@
         }
       }
     },
+    "Timeline" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikajana"
+          }
+        }
+      }
+    },
     "Timeline View" : {
-
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikajana -näkymä"
+          }
+        }
+      }
     },
     "until deadline" : {
       "localizations" : {
@@ -602,7 +673,15 @@
       }
     },
     "View as timeline" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katso aikajanalla"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

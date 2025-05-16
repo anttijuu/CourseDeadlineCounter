@@ -9,8 +9,7 @@ import Foundation
 import AppKit
 import OSLog
 
-// TODO: Make sure entering new course name does not clash with existing course name.
-// TODO: Make sure deadlines are after the course start date.
+// TODO: Fix: when changing future deadline to past, does not cancel forthcoming alerts.
 
 @Observable
 class Deadlines {
@@ -52,6 +51,7 @@ class Deadlines {
 					}
 				}
 			}
+			courses.removeAll()
 			if !courseNames.isEmpty {
 				log.debug("Found \(courseNames.count) json files in directory")
 				for courseName in courseNames {

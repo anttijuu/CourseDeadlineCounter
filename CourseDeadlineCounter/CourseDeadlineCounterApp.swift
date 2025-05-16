@@ -14,7 +14,7 @@ struct CourseDeadlineCounterApp: App {
 	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			MainView()
 				.environment(deadlines)
 		}
 		WindowGroup("Timeline View", id: "timeline-view") {

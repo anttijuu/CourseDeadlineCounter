@@ -36,6 +36,12 @@ Some notes about the app with deadline examples seen below:
   * If your mouse does not support swiping, use the right mouse button and a context menu will appear.
   * When deleting, confirmation is displayed first.
 
+There is also a timeline view, displaying the courses ongoing or starting in the future, placed on a timeline with weekly markers. The timeline view is shown here in dark mode:
+
+![Timeline view](timeline-view.png)
+
+This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view will display a red vertical line where the current date is among the different deadlines. In the example above, both of the courses start in the future so the red line is not displayed. 
+
 The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`, each course stored in separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again.
 
 Additional benefit of using JSON as the file format is that anyone can implement a similar app with any other language to whichever platform they prefer, supporting this file format.

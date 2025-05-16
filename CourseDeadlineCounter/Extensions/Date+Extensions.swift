@@ -22,4 +22,15 @@ extension Date {
 		return Calendar.current.date(from: components)!
 	}
 	
+	func toPreviousMonday() -> Date {
+		var tmpDate = self
+		var components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .weekday], from: tmpDate)
+		while components.weekday! != 2 {
+			tmpDate = tmpDate.addingTimeInterval(-86400)
+			components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .weekday], from: tmpDate)
+		}
+		components.second = 0
+		return Calendar.current.date(from: components)!
+	}
+	
 }

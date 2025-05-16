@@ -129,12 +129,6 @@ struct ContentView: View {
 						Image(systemName: "rectangle.stack.badge.plus")
 					})
 					.help("Add new course")
-					Button(action: {
-						openWindow(id: "timeline-view")
-					}, label: {
-						Image(systemName: "calendar.day.timeline.left")
-					})
-					.help("View as timeline")
 				}
 			}
 		}, detail: {
