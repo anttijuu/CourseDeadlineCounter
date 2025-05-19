@@ -77,8 +77,8 @@ class Deadlines {
 		return courses.contains(where: { $0.name == withName } )
 	}
 	
-	func notFinished() -> [Course] {
-		courses.filter( { $0.notEnded } )
+	var ongoing: [Course] {
+		courses.filter( { $0.ongoing } )
 	}
 	
 	func delete(_ course: Course) throws {

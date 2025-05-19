@@ -42,6 +42,10 @@ class Deadline: Codable {
 		return viewUpdateNeeded
 	}
 	
+	var whenHot: Date {
+		date.addingTimeInterval(-TimeInterval(becomesHotDaysBefore * 24 * 60 * 60))
+	}
+	
 	var isHot: Bool {
 		guard !isReached else {
 			return false

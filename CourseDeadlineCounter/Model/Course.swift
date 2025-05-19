@@ -28,10 +28,15 @@ class Course: Codable {
 		deadlines = []
 	}
 	
+	
+	var ongoing: Bool {
+		hasStarted && notEnded
+	}
+	
 	var hasStarted: Bool {
 		return Date.now >= startDate
 	}
-	
+		
 	var endDate: Date {
 		deadlines.last?.date ?? Date.distantPast
 	}

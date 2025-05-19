@@ -36,17 +36,19 @@ Some notes about the app with deadline examples seen below:
   * If your mouse does not support swiping, use the right mouse button and a context menu will appear.
   * When deleting, confirmation is displayed first.
 
-There is also a timeline view, displaying the courses ongoing or starting in the future, placed on a timeline with weekly markers. The timeline view is shown here in dark mode:
+There is also a **timeline view**, displaying the currently ongoing courses, placed on a timeline with weekly markers. The timeline view is shown here:
 
 ![Timeline view](images/timeline-view.png)
 
-This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view will display a red vertical line where the current date is among the different deadlines. In the example above, both of the courses start in the future so the red line is not displayed. 
+This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view will display a red vertical line where the current date is among the different deadlines. The dotted red line before the deadline indicates the time when the deadline is "hot", and you *really* should be working on it, if the task is not already in a good shape.
 
-The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`, each course stored in separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again.
+## Deadline files
+
+The app saves the course deadlines to the user's Document folder, in `Documents/CourseDeadlines`. Each course is stored in a separate JSON file. This way, teacher or students can share the course deadlines easily among themselves. Just be aware that if the teacher makes changes to the deadlines after publishing the file, the updated file should be shared again or corresponding changes made.
 
 Additional benefit of using JSON as the file format is that anyone can implement a similar app with any other language to whichever platform they prefer, supporting this file format.
 
-> Note that the current version is not yet aware of new files added to the folder when the app is running. New files (courses) copied to that directory are listed only after the application restart.
+> Note that the current version is not yet aware of new files added to the folder when the app is running. New files (courses) copied to that directory are listed in the app with updated information only after the application restart.
  
 
 ## Editing a course and adding deadlines
