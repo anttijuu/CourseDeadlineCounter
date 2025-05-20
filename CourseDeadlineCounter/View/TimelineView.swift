@@ -129,7 +129,7 @@ struct TimelineView: View {
 									// origin.x -= image.size.width + 2
 																		
 									// Draw the deadline image symbol
-									context.draw(image, in: CGRect(origin: origin, size: image.size))
+									context.draw(image, in: CGRect(origin: origin, size: CGSize(width: deadlineTextSize.height, height: deadlineTextSize.height)))
 									
 									// Draw the hotness indicator before the deadline
 									var hotOrigin = CGPoint(x: origin.x, y: origin.y)
@@ -142,11 +142,11 @@ struct TimelineView: View {
 									context.stroke(hotnessPath, with: .color(Color(.red)), style: .init(lineWidth: 2, dash: [3,3]))
 									
 									// Adjust and draw the text of the deadline after or before the deadline symbol
-									origin.x += image.size.width + 2
+									origin.x += deadlineTextSize.height + 2
 									rect = CGRect(origin: origin, size: CGSize(width: size.width, height: symbolHeight))
 									let measuredSize = resolvedDeadlineText.measure(in: rect.size)
 									if rect.origin.x + measuredSize.width > size.width {
-										rect = rect.offsetBy(dx: -measuredSize.width - image.size.width , dy: 0)
+										rect = rect.offsetBy(dx: -measuredSize.width - deadlineTextSize.height - 2 , dy: 0)
 									}
 									context.draw(resolvedDeadlineText, in: rect)
 									origin.y += symbolHeight + 6
