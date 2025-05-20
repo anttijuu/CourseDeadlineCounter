@@ -60,10 +60,7 @@ struct TimelineView: View {
 					symbolHeight = resolved.measure(in: CGSize(width: size.width, height: 20.0)).height
 					
 					// TODO:
-					// - Draw a pink background from date-when-becomes-hot to actual deadline date.
-					// - Horizontal lines or a grid drawn at the background? Below course, separating courses better?
-					// - What if the space is too small for all ongoing courses? Zoom or scroll?
-					// - Check if looks cleaner without the grid/lines...
+					// - What if the space is too small for all ongoing courses? Zoom or scroll? Can always enlarge the window up to a limit.
 					
 					let coursesToPlot = if let selectedCourse {
 						[selectedCourse]

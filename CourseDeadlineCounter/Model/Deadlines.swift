@@ -9,8 +9,6 @@ import Foundation
 import AppKit
 import OSLog
 
-// TODO: Fix: when changing future deadline to past, does not cancel forthcoming alerts.
-
 @Observable
 class Deadlines {
 	
