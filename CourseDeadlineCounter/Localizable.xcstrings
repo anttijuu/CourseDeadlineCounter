@@ -672,16 +672,6 @@
         }
       }
     },
-    "Timeline View" : {
-      "localizations" : {
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aikajana -näkymä"
-          }
-        }
-      }
-    },
     "until deadline" : {
       "localizations" : {
         "fi" : {
