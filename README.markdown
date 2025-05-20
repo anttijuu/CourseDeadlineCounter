@@ -36,11 +36,11 @@ Some notes about the app with deadline examples seen below:
   * If your mouse does not support swiping, use the right mouse button and a context menu will appear.
   * When deleting, confirmation is displayed first.
 
-There is also a **timeline view**, displaying the currently ongoing courses, placed on a timeline with weekly markers. The timeline view is shown here:
+There is also a **timeline view**, displaying the currently ongoing courses, deadlines placed on a timeline with weekly markers. The timeline view is shown here:
 
 ![Timeline view](images/timeline-view.png)
 
-This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view will display a red vertical line where the current date is among the different deadlines. The dotted red line before the deadline indicates the time when the deadline is "hot", and you *really* should be working on it, if the task is not already in a good shape.
+This enables the user to get an overall view on how deadlines in different courses pile up and when one should be doing work for specific deadline. The timeline view displays a red vertical line where the current date is among the different deadlines. The dotted red line before the deadline indicates the time when the deadline is "hot", and you *really* should be working on it, if the task is not already in a good shape. If you wish to view or show deadlines of one course only, you can do that usig the dropdown list picker. 
 
 ## Deadline files
 

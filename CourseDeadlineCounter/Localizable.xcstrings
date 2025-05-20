@@ -98,6 +98,16 @@
         }
       }
     },
+    "All" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaikki"
+          }
+        }
+      }
+    },
     "Cancel" : {
       "localizations" : {
         "fi" : {
@@ -268,12 +278,12 @@
         }
       }
     },
-    "Deadline is at the symbol location on the timeline" : {
+    "Deadline is at the symbol's location on the timeline" : {
       "localizations" : {
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deadline sijaitsee aikajanalla symbolin kohdalla."
+            "value" : "Deadline on aikajanalla sen symbolin kohdalla"
           }
         }
       }
@@ -598,6 +608,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "SF Symbolin nimi:"
+          }
+        }
+      }
+    },
+    "Show ongoing courses" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä meneillään olevista kursseista"
           }
         }
       }

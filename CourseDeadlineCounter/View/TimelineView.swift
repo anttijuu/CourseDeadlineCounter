@@ -11,6 +11,8 @@ struct TimelineView: View {
 	@Environment(Deadlines.self) var deadlines
 	@Environment(\.colorScheme) var colorScheme
 	
+	@State private var selectedCourse: Course? = nil
+	
 	@State var positions: [SIMD2<Float>] = [
 		 .init(x: 0, y: 0), .init(x: 0.2, y: 0), .init(x: 1, y: 0),
 		 .init(x: 0, y: 0.7), .init(x: 0.1, y: 0.5), .init(x: 1, y: 0.2),
@@ -22,9 +24,21 @@ struct TimelineView: View {
 	
 	var body: some View {
 		VStack {
-			Text("Deadline is at the symbol location on the timeline")
-				.font(.caption)
-			Divider()
+			VStack {
+				HStack {
+					Spacer()
+					Picker("Show ongoing courses", selection: $selectedCourse) {
+						Text("All").tag(Optional<Course>(nil))
+						ForEach(deadlines.ongoing, id: \.self) { course in
+							Text(course.name).tag(Optional(course))
+						}
+					}
+					Spacer()
+				}
+				Text("Deadline is at the symbol's location on the timeline")
+					.font(.caption)
+			}
+			.padding([.top, .leading, .trailing])
 			ZStack {
 				MeshGradient(
 					 width: 3,
@@ -51,7 +65,12 @@ struct TimelineView: View {
 					// - What if the space is too small for all ongoing courses? Zoom or scroll?
 					// - Check if looks cleaner without the grid/lines...
 					
-					let coursesToPlot = deadlines.ongoing.sorted(by: { $0.startDate < $1.startDate } )
+					let coursesToPlot = if let selectedCourse {
+						[selectedCourse]
+					} else {
+						deadlines.ongoing.sorted(by: { $0.startDate < $1.startDate } )
+					}
+					
 					if coursesToPlot.isEmpty {
 						// Draw info that there is no ongoing courses to show
 						var textSize = size
@@ -66,7 +85,7 @@ struct TimelineView: View {
 						let daysToShow = (abs(lastDate.timeIntervalSince(firstDate)) / 86400) + 4
 						let dayWidth: CGFloat = size.width / daysToShow
 
-						origin = .zero
+						origin = CGPoint(x: margin, y: margin)
 						
 						if Date.now > firstDate && Date.now < lastDate {
 							let daysFromFirstDate = abs(firstDate.timeIntervalSince(Date.now)) / 86400
