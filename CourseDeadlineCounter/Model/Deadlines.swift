@@ -62,14 +62,6 @@ class Deadlines {
 			}
 		}
 	}
-		
-	func newCourse() -> Course {
-		counter += 1
-		return Course(
-			name: NSLocalizedString("<New Course \(counter)>", comment: "String shown when a new course is created"),
-			startDate: Date.now
-		)
-	}
 	
 	func hasCourse(withName: String) -> Bool {
 		return courses.contains(where: { $0.name == withName } )

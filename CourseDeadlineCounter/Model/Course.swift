@@ -10,7 +10,7 @@ import Foundation
 @Observable
 class Course: Codable {
 	var uuid: UUID
-	var name: String
+	private(set) var name: String
 	var startDate: Date
 	var deadlines: [Deadline]
 	
@@ -28,6 +28,12 @@ class Course: Codable {
 		deadlines = []
 	}
 	
+	func changeName(_ newName: String) {
+		if name != newName {
+			name = newName
+			uuid = UUID()
+		}
+	}
 	
 	var ongoing: Bool {
 		hasStarted && notEnded
@@ -84,6 +90,12 @@ class Course: Codable {
 	func remove(_ deadline: Deadline) throws {
 		if let index = deadlines.firstIndex(where: { $0.id == deadline.id }) {
 			try remove(at: index)
+		}
+	}
+	
+	func moveDeadlines(forDays: Int) {
+		for deadline in deadlines {
+			deadline.moveDate(forDays)
 		}
 	}
 		

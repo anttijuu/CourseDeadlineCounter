@@ -220,8 +220,18 @@
         }
       }
     },
+    "Course start date was moved %lf days" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurssin aloituspäivää siirrettiin %lf päivää"
+          }
+        }
+      }
+    },
     "Courses must have a unique name" : {
-      "comment" : "Shown if user tries to save a course with a name of an existiing course",
+      "comment" : "Shown if user tries to save a course with a name of an existing course",
       "localizations" : {
         "fi" : {
           "stringUnit" : {
@@ -335,6 +345,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poista tämä deadline? Tätä ei voi perua."
+          }
+        }
+      }
+    },
+    "Do you wish to move deadline dates accordingly?" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haluatko siirtää deadline -päivämääriä vastaavasti?"
           }
         }
       }
@@ -481,6 +501,16 @@
         }
       }
     },
+    "Move deadline dates too?" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siirrä myös deadline-päivämääriä?"
+          }
+        }
+      }
+    },
     "Move the the course to Trash?" : {
       "localizations" : {
         "fi" : {
@@ -508,6 +538,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seuraava deadline "
+          }
+        }
+      }
+    },
+    "No" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei"
           }
         }
       }
@@ -678,6 +718,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "deadlineen"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "localizations" : {
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kyllä"
           }
         }
       }

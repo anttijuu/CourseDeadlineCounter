@@ -62,6 +62,10 @@ class Deadline: Codable {
 		let currentSpan = Date.now.distance(to: startDate)
 		return min(max(Int((currentSpan / wholeSpan) * 100), 0), 100)
 	}
+	
+	func moveDate(_ forDays: Int) {
+		date.addTimeInterval(TimeInterval(forDays * 24 * 60 * 60))
+	}
 }
 
 extension Deadline: Identifiable, Equatable, Comparable, Hashable {
