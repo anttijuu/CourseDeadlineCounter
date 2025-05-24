@@ -61,7 +61,7 @@ struct CourseEditView: View {
 		})
 		.confirmationDialog("Move deadline dates too?", isPresented: $askMovingDeadlineDates) {
 			VStack {
-				Text("Course start date was moved \(editStartDate.timeIntervalSince(course!.startDate) / 86400) days")
+				Text("Course start date was moved \(editStartDate.timeIntervalSince(course?.startDate ?? Date.now) / 86400) days")
 				Text("Do you wish to move deadline dates accordingly?")
 				Button("Yes") {
 					if save(moveDeadlinesState: .moveDeadlines) {
