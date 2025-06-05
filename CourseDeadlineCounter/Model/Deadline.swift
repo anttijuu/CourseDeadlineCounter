@@ -38,7 +38,9 @@ class Deadline: Codable {
 	}
 	
 	var isReached: Bool {
-		viewUpdateNeeded = date <= Date.now
+		if date <= Date.now && !viewUpdateNeeded {
+			viewUpdateNeeded = true
+		}
 		return viewUpdateNeeded
 	}
 	
