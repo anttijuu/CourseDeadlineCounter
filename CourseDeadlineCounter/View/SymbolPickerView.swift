@@ -70,6 +70,7 @@ struct SymbolPickerView: View {
 		}
 	}
 }
+
 #Preview {
 	@Previewable @State var symbolName = ""
 	SymbolPickerView(symbolName: $symbolName)
